@@ -81,7 +81,7 @@ app.post("/create_preference", (req, res) => {
 					
 					setTimeout(() => {
 	
-						res.redirect('http://127.0.0.1:5502/SucessoPage/success.html')
+						res.redirect('http://127.0.0.1:5500/SucessoPage/index.html')
 	
 					}, 1000)
 					return response.json();
