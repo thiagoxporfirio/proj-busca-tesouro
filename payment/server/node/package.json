@@ -1,0 +1,24 @@
+{
+  "name": "ls",
+  "version": "1.0.0",
+  "description": "- Node v10 or higher\r - Read our [testing instructions](https://www.mercadopago.com/developers/en/guides/online-payments/checkout-pro/test-integration)\r - Setup your credentials: \r   - Public Key on client-side and locale `index.js`\r   - Private Access Token on server-side `server.js`",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "debug": "nodemon --inspect=5005 server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "4.17.1",
+    "install": "^0.13.0",
+    "localStorage": "^1.0.4",
+    "mercadopago": "^1.5.8",
+    "node-fetch": "^2.6.7",
+    "npm": "^8.19.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  },
+  "author": "",
+  "license": "ISC"
+}
