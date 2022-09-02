@@ -1,0 +1,739 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Rozha+One&display=swap');
+
+:root {
+    --input-error: red;
+    --button-disabled: #acacac;
+    --button-success: rgb(18, 151, 107);
+    --white: #fff;
+    --black: #303030;
+    --gray: #929292;
+    --light-gray: #cfcfcf;
+}
+
+
+@keyframes changecolor{
+    0%{ transition: transform 100ms cubic-bezier(.45,.97,.68,.2.48);}
+    100%{ transform: scale(1.08);}
+}
+
+#gameover{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.87);
+    color: white;
+    font-size: 40px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 99;
+}
+
+#fechar{
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bolder;
+    color: white;
+    background-color:rgba(0, 0, 0, 0);
+    border: 1px solid white;
+    border-radius: 80px;
+    cursor: pointer;
+}
+
+#fechar:hover{
+    color: #ffb400;
+    transition: all 0.4s ease;
+}
+
+.titulo{
+    text-align: center;
+    font-family: 'Noto Sans', sans-serif;
+    padding: 10px;
+}
+
+#btn-sucesso{
+    background: #ffb400;
+    padding: 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+#btn-sucesso:hover{
+    background-color:#1c63aa;
+    transform: scale(1.08);
+    color: white;
+}
+
+
+textarea {
+    resize: vertical;
+  }
+
+  
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    height: 100vh;
+}
+
+
+
+
+h1{
+    text-align: center;
+    color: #0033a0;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-size: 3.125rem;
+}
+
+h3{
+    text-align: center;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1.25rem;
+    color: #2a2a2a;
+}
+
+
+a {
+    font-family: 'Noto Sans', sans-serif;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  a:hover {
+    opacity: 0.7;
+  }
+  
+  .logo {
+    color: white;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #0033a0;
+    height: 8vh;
+  }
+  
+  section {
+    background-size: cover;
+  }
+  
+  .logo1{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 20%;
+    height:100%;
+  }
+  .logosite{
+    cursor: pointer;
+    width: 145px;
+  }
+
+  .nav-list {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-list li {
+    letter-spacing: 2px;
+    margin-left: 32px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+  }
+  
+  .mobile-menu {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+  }
+  
+  @media (max-width: 999px) {
+    body {
+      overflow-x: hidden;
+    }
+    .nav-list {
+      position: absolute;
+      top: 8vh;
+      right: 0;
+      width: 50vw;
+      height: 92vh;
+      background: #0033a0;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in;
+    }
+    .nav-list li {
+      margin-left: 0;
+      opacity: 0;
+    }
+    .mobile-menu {
+      display: block;
+    }
+  }
+  
+  .nav-list.active {
+    transform: translateX(0);
+  }
+  
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+  }
+  
+  .mobile-menu.active .line2 {
+    opacity: 0;
+  }
+  
+  .mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+  }
+
+.bt{
+    letter-spacing: 0px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+}
+
+.btn{
+    width: 100px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    background: #ffb400;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.btn:hover{
+    background: #1c63aa;
+    transform: scale(1.08);
+}
+
+.btn2{
+    width: 150px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    background: #ffb400;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.btn2:hover{
+    background: #1c63aa;
+    transform: scale(1.08);
+}
+
+
+section .containerh1{
+    margin: auto;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 980px;
+    width: 90%;
+    max-width: 980px;
+    width: 90%;
+}
+
+
+.containerPacote{
+    
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    width: 60%;
+    padding: 67px 19px 56px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+}
+
+.planoVeicular{
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+b{
+    text-align: center;
+    color: #11e068;
+    font-weight: 800;
+    font-size: 2.25rem;
+    margin-bottom: 6px;
+}
+
+.preco{
+    display: flex;
+    flex-direction: column;
+}
+
+s{
+    text-align: center;
+    font-family: 'Inconsolata', monospace;
+    font-size: 1.25rem;
+    color: brown;
+}
+
+span{
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.938rem;
+    margin-top: 20px;
+}
+
+
+
+.parte1{
+    margin-top: 25px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+}
+
+
+#primeiroh3{
+    padding-bottom: 20px;
+}
+
+.containerh1{
+    display: block;
+
+}
+
+.input1{
+    text-transform: uppercase;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    padding: 20px;
+    font-size: 0.938rem;
+}
+
+.input-consulta{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-1{
+    font-family: 'Noto Sans', sans-serif;
+    margin-left: 15px;
+    width: 180px;
+    height: 55px;
+    background: #ffb400;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.4s ease;
+}
+
+.btn-1:hover{
+    transform: scale(1.08);
+    background: #3286ca;
+}
+
+.btn-1:disabled {
+    background: var(--button-disabled);
+    cursor: not-allowed;
+}
+  
+
+.btn-1.success {
+    background: var(--button-success);
+}
+  
+.btn-1.error {
+    background: var(--input-error);
+}
+
+.btn-2{
+    animation-name: changecolor;
+    animation-duration: 0.65s;
+    animation-iteration-count: infinite;
+    width: 100%;
+    height: 45px;
+    background: #0033a0;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.4s ease;
+}
+
+.acolor{
+    color: white;
+}
+
+.parte3{
+    
+    background-color: #0033a0;
+}
+
+.container3 {
+    margin: auto;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 980px;
+    width: 90%;
+    
+}
+
+
+.h1pacote{
+    margin-top: 50px;
+    text-align: center;
+    color: #ffb400;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-size: 3.75rem;
+}
+
+.h3pacote{
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1.25rem;
+    color: white;
+    padding-bottom: 20px;
+}
+
+p{
+    color: black;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.btn-pacote{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+section .sobreassinatura{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.Csobreassinatura{
+
+    flex-direction: column;
+    display: flex;
+    margin: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+footer{
+    height: auto;
+    margin: auto;
+    max-width: 100%;
+    padding: 30px;
+    display: flex;
+    background-color: #0033a0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footercontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+footer .todo_conteudoFooter{
+    margin-top: 12%;
+    max-width: 980px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contatodados{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 150px;
+}
+
+
+.ul2{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+}
+
+
+#image1{
+    margin-top: 20px;
+    margin-right: 15px;
+    width: 30px;
+}
+
+#image2{
+    margin-top: 20px;
+    margin-left: 15px;
+    width: 30px;
+}
+
+#image{
+    width: 100px;
+    
+}
+
+li {
+    list-style-type: none;
+}
+
+.form1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.formulario2{
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.h1footer{
+    color: #ffb400;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-size: 3.125rem;
+    text-shadow: 5px 5px 20px rgb(107, 106, 106);
+}
+
+.h3footer{
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1.25rem;
+    color: white;
+
+}
+
+.inputdados{
+    width:350px;
+    margin-bottom: 20px;
+    padding: 20px;
+    font-size: 0.938rem;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.caixamensage{
+    padding: 14px 26px;
+    width: 100%;
+    height: 203px;
+    margin-bottom: 24px;
+    font-size: 0.938rem;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.cartao-bandeiras{
+    padding-bottom: 50px;
+    padding-top: 150px;
+    display: flex;
+    flex-direction: row
+}
+
+.conteudo-contato{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+}
+
+
+.contatodados2{
+    padding-top: 40px;
+    
+}
+
+.h3dados{
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-size: 1.25rem;
+    color: white;
+}
+
+#imgcar{
+    width: 100%;
+}
+
+span{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+}
+
+
+@media (max-width: 2560px){
+    .none{
+        display: none;
+    }
+
+}
+@media (max-width: 998px){
+    .logosite{
+    }
+    
+}
+
+@media (max-width: 763px){
+    html{
+        font-size: 70%;
+    }
+}
+
+
+@media (max-width: 810px){
+    
+    .btn-entrar{
+        margin-left: 20px;
+    }
+
+}
+
+
+@media (max-width: 625px) {
+    .container {
+        padding-left: 78%;
+    }
+
+    .none{
+            display: flex;
+        }
+
+    .btn-entrar{
+        width: 250px;
+    } 
+    .btn-entrar2{
+        width: 150px;
+}}
+
+
+@media (max-width: 540px){
+    header .menu-sectio {
+        justify-content: none;
+    }
+}
+
+
+@media (max-width: 500px){
+    #image{
+        width: 75px;
+    }
+}
+
+@media (max-width: 441px){
+    .inputdados{
+        width: 300px;
+
+    }
+}
+
+
+
+@media (max-width: 426px){
+    .btn-entrar .btn-1 .dados-cnpj{
+        font-size: 20%;
+        padding: 15px;
+    }
+}
+
+
+@media (max-width: 396px){
+    .btn-1{
+        width: 75px;
+    }
+
+}
+
+@media (max-width: 385px){
+    #image{
+        width: 65px;
+    }
+}
+
+@media (max-width: 378px){
+    .btn-entrar .btn1{
+        margin-left: 15px;
+    }
+}
+
+

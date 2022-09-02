@@ -1,0 +1,465 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Rozha+One&display=swap');
+
+@keyframes changecolor{
+    0%{ transition: transform 100ms cubic-bezier(.45,.97,.68,.2.48);}
+    100%{ transform: scale(1.08);}
+}
+
+strong{
+    font-family: 'Noto Sans', sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    height: 100vh;
+}
+
+body{
+    height: 100vh;
+}
+
+h1{
+    text-align: center;
+    color: #0033a0;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-size: 3.125rem;
+  }
+  
+  h3{
+    text-align: center;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1.25rem;
+    color: black;
+  }
+  
+  
+  a {
+    font-family: 'Noto Sans', sans-serif;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  .logo1{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 20%;
+    height:100%;
+  }
+  .logosite{
+    cursor: pointer;
+    width: 145px;
+  }
+
+  a:hover {
+    opacity: 0.7;
+  }
+  
+
+  
+  nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #0033a0;
+    height: 8vh;
+  }
+  
+  
+  .nav-list {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-list li {
+    letter-spacing: 2px;
+    margin-left: 32px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+  }
+  
+  .mobile-menu {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+  }
+
+  .imgfaixa{
+    margin-top: 10%;
+    width: 100%;
+  }
+  
+  @media (max-width: 999px) {
+    body {
+      overflow-x: hidden;
+    }
+    .nav-list {
+      position: absolute;
+      top: 8vh;
+      right: 0;
+      width: 50vw;
+      height: 92vh;
+      background: #0033a0;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in;
+    }
+    .nav-list li {
+      margin-left: 0;
+      opacity: 0;
+    }
+    .mobile-menu {
+      display: block;
+    }
+  }
+  
+  .nav-list.active {
+    transform: translateX(0);
+  }
+  
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+  }
+  
+  .mobile-menu.active .line2 {
+    opacity: 0;
+  }
+  
+  .mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+  }
+  
+  .bt{
+    letter-spacing: 0px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .btn{
+    width: 100px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Noto Sans', sans-serif;
+    background: #ffb400;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: all 0.4s ease;
+  }
+  
+  .btn:hover{
+    background: #1c63aa;
+    transform: scale(1.08);
+  }
+  
+  .btn2{
+    width: 150px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Noto Sans', sans-serif;
+    background: #ffb400;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: all 0.4s ease;
+  }
+  
+  .btn2:hover{
+    background: #1c63aa;
+    transform: scale(1.08);
+  }
+
+
+
+section .box-planos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 40px;
+
+}
+
+
+.containerPacote{
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    width: 100%;
+    height: auto;
+    padding: 67px 19px 56px;
+    background-color: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 12px;
+    margin-right: 20px;
+
+}
+
+
+.planoVeicular{
+    font-size: 2.5rem;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+p{
+    text-align: center;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+b{
+    color: #11e068;;
+    font-weight: 800;
+    font-size: 3rem;
+    line-height: 44px;
+    margin-bottom: 6px;
+}
+
+.preco{
+    display: flex;
+    flex-direction: column;
+}
+.p-info{
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+s{
+    font-family: 'Inconsolata', monospace;
+    font-size: 1.25rem;
+    color: brown;
+}
+
+span{
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-size: 0.938rem;
+    margin-top: 20px;
+}
+
+#btn-1{
+    animation-name: changecolor;
+    animation-duration: 0.65s;
+    animation-iteration-count: infinite;
+    margin-left: 15px;
+    width: 180px;
+    height: 45px;
+    background: #0033a0;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.4s ease;
+}
+
+.containercaixa{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+}
+
+.caixa1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.caixa2{
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+section .caixa2 ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+section .caixa2 ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 2%;
+    align-items: center;
+    list-style: none;
+    text-decoration: none;
+    font-size: 1.25rem;
+}
+
+section .caixa2 ul li img{
+    width: 3rem;
+    height: 3rem ;
+    margin-right: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 998px){
+    .logosite{
+    }
+    
+}
+
+
+@media (max-width: 763px){
+    html{
+        font-size: 70%;
+    }
+
+    section .box-planos{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 730px){
+
+    html{
+        font-size: 70%;
+    }
+}
+
+@media (max-width: 810px){
+    
+    .btn-entrar{
+        margin-left: 20px;
+    }
+    
+}
+
+@media (max-width: 2560px){
+    .none{
+        display: none;
+    }
+}
+
+
+@media (max-width: 625px) {
+    .container {
+        padding-left: 78%;
+    }
+
+    .none{
+            display: flex;
+        }
+        .btn-entrar{
+            width: 250px;
+        } 
+        .btn-entrar2{
+            width: 150px;}
+
+            li{
+                margin-bottom: 10px;
+            }
+             
+}
+
+@media (max-width: 555px){
+    section .caixa2 ul{
+        display: block;
+    }
+
+    section .caixa2 ul li{
+        margin-top: 5%;
+    }
+    
+    section .caixa2 ul li{
+        margin-right: 0;
+    }
+}
+
+
+@media (max-width: 540px){
+    header .menu-sectio {
+        justify-content: none;
+    }
+}
+
+@media (max-width: 520px){
+    section .containerPacote{
+        margin: auto
+    }
+}
+
+@media (max-width: 426px){
+    .btn-entrar {
+        font-size: 20%;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 378px){
+    .btn-entrar {
+        margin-left: 15px;
+    }
+}

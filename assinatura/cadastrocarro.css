@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+:root {
+    --input-error: red;
+    --button-disabled: #acacac;
+    --button-success: rgb(18, 151, 107);
+    --white: #fff;
+    --black: #303030;
+    --gray: #929292;
+    --light-gray: #cfcfcf;
+  }
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+body{
+    background-color: #ebe7e7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+#gameover{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.87);
+    color: white;
+    font-size: 40px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 99;
+}
+
+#fechar{
+    padding: 10px;
+    font-size: 20px;
+    margin-bottom: 45px;
+    font-weight: bolder;
+    color: white;
+    background-color:rgba(0, 0, 0, 0);
+    border: 1px solid white;
+    border-radius: 80px;
+    cursor: pointer;
+}
+
+#fechar:hover{
+    color: red;
+    transition: all 0.4s ease;
+}
+
+.titulo{
+    text-align: center;
+    font-family: 'Noto Sans', sans-serif;
+    padding: 10px;
+}
+
+.subtitulo{
+    font-size: 20px;
+}
+
+
+#btn-sucesso{
+    background: #ffb400;
+    padding: 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+#btn-sucesso:hover{
+    background-color:#1c63aa;
+    transform: scale(1.08);
+    color: white;
+}
+
+.btn-home{
+    background: rgb(18, 151, 107);
+    padding: 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.btn-home:hover{
+    background-color:#1c63aa;
+    transform: scale(1.08);
+    color: white;
+}
+
+
+
+.boxborder{
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+    border-radius: 12px;
+    margin-top: 20px;
+    border: 1px 2px solid grey;
+}
+
+
+.error{
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid #e71414;
+    color: black;
+    outline: none;
+    font-weight: 500;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.loading{
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    background: #888888;
+    color: #fff;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.success{
+    width: 100%;
+    height: 47px;
+    color: #090927;
+    border: 1px solid green;
+    border-radius: 5px;
+    outline: none;
+    padding: 15px;
+    font-size: 15px;
+    transition: all 0.4s ease;
+}
+
+#msgError{
+    padding: 5px;
+    margin-top: 5px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: red;
+    font-size: 15px;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.box{
+    width: 930px;
+}
+
+.img-box{
+    width: 170px;
+    margin-bottom: 25px;
+}
+
+.img-box img{
+    width: 100%;
+}
+
+.form-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    backdrop-filter: blur(40px);
+    padding: 30px 40px;
+    border-radius: 0 20px 20px 0;
+}
+
+.form-box h2{
+    font-size: 30px;
+    text-align: center;
+}
+
+.form-box p{
+    font-weight: bold;
+    color: #3D3D3D;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.form-box p a{
+    color: #0033a0;
+    text-decoration: none;
+}
+
+.form-box form{
+    margin: 20px 0;
+}
+form .input-group{
+    margin-bottom: 15px;
+}
+form .input-group label{
+    color: #0033a0;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+form .input-group input{
+    width: 100%;
+    height: 47px;
+    color: black;
+    font-weight: bold;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 15px;
+    transition: all 0.4s ease;
+    outline: none;
+}
+
+.submitButton{
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    background: #0033a0;
+    color: #fff;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.submitButton:hover {
+    background: #3286ca;
+}
+
+.submitButton:disabled {
+    background: var(--button-disabled);
+    cursor: not-allowed;
+  }
+  
+
+  .submitButton.success {
+    background: var(--button-success);
+  }
+  
+  .submitButton.error {
+    background: var(--input-error);
+  }
+
+
+

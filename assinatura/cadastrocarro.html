@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./cadastrocarro.css" type="text/css">
+    <title>Cadastrando um veiculos roubado</title>
+</head>
+<body>
+    <div id="gameover">
+        <button id="fechar">X</button>
+        <div class="titulo">
+            Parece que voçe atingiu o limite de cadastro :( !
+        </div>
+        <div class="subtitulo">
+            Contrate um plano maior.
+        </div>
+        <div class="box-buttons">
+        <button id="btn-sucesso">Planos</button>
+        <button class="btn-home">Voltar</button>
+        </div>
+    </div>
+    <div class="box">
+        
+        <div class="form-box">
+            <div>
+                <img class="img-box" src="../assets/logoazul.png" alt="logo">
+            </div>
+            <h2>Cadastre um veículo roubado</h2>
+            <p> Os dados serão reservados no nosso banco.</p>
+            
+                <div id="msgError" style="display: none;">Preencha todos os campos corretamente antes de cadastrar!!</div>
+                <div class="boxborder">
+                    <form>
+                        <div class="input-group">
+                            <label for="nome" id="LabelNomeCompleto"> Nome Completo</label>
+                            <input type="text" id="nome" placeholder="Digite o seu nome completo" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label id="LabelApelido" for="nome"> Placa</label>
+                            <input type="text" id="placa" placeholder="Placa do seu carro" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="email" id="LabelEmail">Renavam</label>
+                            <input type="text" id="renavam" placeholder="Renavam do seu carro" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="senha" id="LabelSenha">Marca e Modelo</label>
+                            <input type="text" id="marca" placeholder="EX: JEEP/RENEGADE LGT T AT" name="senha" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="Confirmarsenha" id="LabelConfirmSenha">Cor do veiculo</label>
+                            <input type="text" id="cor" placeholder="Cor" name="rep_senha" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="Confirmarsenha" id="LabelConfirmSenha">Chassi</label>
+                            <input type="text" id="chassi" placeholder="Motor" name="rep_senha" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="Confirmarsenha" id="LabelConfirmSenha">Ano do carro</label>
+                            <input type="number" id="anoCarro" placeholder="Ano" name="rep_senha" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="Confirmarsenha" id="LabelConfirmSenha">Estado</label>
+                            <input type="text" id="estado" placeholder="Ex: SP" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="Confirmarsenha" id="LabelConfirmSenha">Município</label>
+                            <input type="text" id="municipio" placeholder="Ex: Osasco" required>
+                        </div>
+
+                        <div class="input-group">
+                            <button class="submitButton" type="submit">CADASTRAR</button>
+                        </div>
+                    </form>
+                </div>
+        <script src="./carro.js"></script>
+        <script src="./Btnfunction.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="register.css" type="text/css">
+    <title>Cadastro</title>
+</head>
+<body>
+    <div class="box">
+        
+        <div class="form-box">
+            <div>
+                <img class="img-box" src="../assets/logoazul.png" alt="logo">
+            </div>
+            <h2>Criar Conta</h2>
+            <p> Já é um membro? <a href="../loginUser/login.html"> Login </a> </p>
+            
+            <form name="formcadastro">
+                <div class="input-group">
+                    <label for="nome" id="LabelNomeCompleto"> Nome Completo</label>
+                    <input type="text" id="nome" placeholder="Digite o seu nome completo" required>
+                </div>
+
+                <div class="input-group">
+                    <label id="LabelApelido" for="nome"> Nome do perfil</label>
+                    <input type="text" id="username" placeholder="Digite o seu apelido" required>
+                </div>
+
+
+                <div class="input-group">
+                    <label for="email" id="LabelEmail">E-mail</label>
+                    <input type="email" id="email" placeholder="Digite o seu email" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="telefone" id="LabelTelefone">Telefone</label>
+                    <input type="tel" id="telefone" placeholder="Ex: (DDD)9...">
+                </div>
+
+                <div class="input-group w50">
+                    <label for="senha" id="LabelSenha">Senha</label>
+                    <input type="password" id="senha" placeholder="Digite sua senha" name="senha" required>
+                </div>
+
+                <div class="input-group w50">
+                    <label for="Confirmarsenha" id="LabelConfirmSenha">Confirmar Senha</label>
+                    <input type="password" id="confirmSenha" placeholder="Confirme a senha" name="rep_senha" required>
+                </div>
+
+                <div class="input-group">
+                    <button class="submitButton">Cadastrar</button>
+                </div>
+            </form>
+        </div>
+
+
+
+    <script src="./Registerjs.js"></script>
+    <script src="./register.js"></script>
+    <script src="./page.js"></script>
+   
+</body>
+</html>

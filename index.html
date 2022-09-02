@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" type="text/css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <title>Projeto consulta</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html" class="logo1">
+                <img href="../index.html" class="logosite" src="../assets/logosite.png" alt="logo site">
+            </a>   
+               
+          <div class="mobile-menu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
+          <ul class="nav-list">
+            <li><a href="./carros/carros_procurados.html">Carros</a></li>
+            <li><a href="./porqueutilizar/porque.html">Porque Utilizar?</a></li>
+            <li><a href="./assinatura/assinatura.html">Planos</a></li>
+            <li><a href="./comofunciona/comofunciona.html">Como Funciona</a></li>
+            <li class="btn"><a class="bt" href="./loginUser/login.html">Login</a></li>
+            <li class="btn2"><a class="bt" href="./cadastroUser/register.html">Cadastre-se</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div id="gameover">
+        <button id="fechar">X</button>
+        <div class="titulo">
+            Parabéns, você e campeão achou um carro procurado!!
+        </div>
+        <button id="btn-sucesso">Entre em contato</button>
+    </div>
+    <section class="parte1">
+        <div class="containerh1">
+            <h1 id="titulo1">Consulte se um veiculo esta sendo PROCURADO!</h1>
+            <br>
+            <h3 id="primeiroh3">Aqui voce consulta se um veiculo esta sendo procurado por alguem e pode ganhar uma recompensa por isso!
+            </h3>
+            <div class="input-consulta">
+                <input class="input1" type="text" placeholder="Insira a placa de busca" autocomplete="off">
+                <button class="btn-1" id="btnSubmit"><strong>Consultar</strong></button>
+            </div>
+            <div class="imgcarro" id="carroimg">
+               <img id="imgcar" src="./assets/carro.png">
+            </div>
+        </div>
+    </section>
+    <section class="parte3" data-aos="fade-right"
+    data-aos-offset="300"
+    data-aos-easing="ease-in-sine">
+        <div class="container3">
+            <div class="pacotes">
+                <h1 class="h1pacote">Pacote de Assinatura</h1>
+                <h3 class="h3pacote">Nossa missão é achar o seu carro o mais rapido possivel junto ao nossos usuários.</h3>
+                <p>Sao mais de 2 milhoes de usuarios ativos.</p>
+            </div>
+            <div id="como" class="containerPacote" style=" margin-top: 50px;">
+                <h3 class="planoVeicular">
+                    Plano veicular
+                </h3>
+                <p class="p-info">Quer achar seu veiculo perdido ou roubado?</p>
+                <p class="preco">
+                    <s>de R$ 29,90 por</s>
+                    <b>R$ 19,90</b>
+                    <span><button type="button" class="btn-2"><strong><a class="acolor" href="./assinatura/assinatura.html">ASSINE AGORA</a></strong></a></button></span>
+                    <span>Cadastre somente 01 carro</span>
+                </p>
+            </div>
+            <div id="como" class="containerPacote" style=" margin-top: 50px;" data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine">
+                <h3 class="planoVeicular">
+                    Plano veicular
+                </h3>
+                <p class="p-info">Quer achar seu veiculo perdido ou roubado?</p>
+                <p class="preco">
+                    <s>de R$ 200,00 por</s>
+                    <b>R$ 179,90</b>
+                    <span><button type="button" class="btn-2"><strong><a class="acolor" href="./assinatura/assinatura.html">ASSINE AGORA</a></strong></a></button></span>
+                    <span>Cadastre ate 10 carros</span>
+                </p>
+            </div>
+            <div id="como" class="containerPacote" style=" margin-top: 50px;" data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine">
+                <h3 class="planoVeicular">
+                    Plano veicular
+                </h3>
+                <p class="p-info">Quer achar seu veiculo perdido ou roubado?</p>
+                <p class="preco">
+                    <s>de R$ 400,00 por</s>
+                    <b>R$ 399,90</b>
+                    <span><button type="button" class="btn-2"><strong><a class="acolor" href="./assinatura/assinatura.html">ASSINE AGORA</a></strong></a></button></span>
+                    <span>Cadastre uma quantidade Ilimitada</span>
+                </p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="todo_conteudoFooter">
+            <div class="footercontainer">
+                <div class="footer-conteudo">
+                    <h1 class="h1footer">Fale Conosco</h1>
+                    <h3 class="h3footer">Preencha o formulario e aguarde o contato.</h3>
+                </div>
+                <form class="form1">
+                    <div class="formulario2">
+                        <input class="inputdados" type="text" name="nome" placeholder="Nome*" required id="contact_name" value="">
+                        <input class="inputdados" type="text" name="email" placeholder="E-mail*" required id="contact_email" value="">
+                        <input class="inputdados" type="text" name="telefone" placeholder="Telefone*" required id="contact_tell" value="">
+                        <input class="caixamensage" type="text" name="mensagem" placeholder="Mensagem*" required id="contact_menssage" value="">
+                        <button class="btn-1" type="submit" name="enviar" id="enviardados"><strong>Enviar</strong></button>
+                    </div>
+                </form>
+            </div>
+            <div class="contatodados">
+                <div class="conteudo-contato">
+                    <ul class="ul1">
+                        <li>Alameda santos 1293, São Paulo SP</li>
+                        <li>(11) 2222 - 1219</li>
+                        <li>contato@gmail.com</li>
+                    </ul>
+                </div>
+                <div class="contatodados2">
+                    <h3 class="h3dados"><strong>Entre em contato conosco:</strong></h3>
+                    <ul class="ul2">
+                        <li><a href="https://api.whatsapp.com/send?1=pt_BR&phone=5516992714334"><img id="image1" class="instagram" src="./assets/insta.png"></a></li>
+                        <li><a href="https://wa.me/5516992714334?&text=Ola!%20Bom%20dia"><img id="image2" class="wpp" src="./assets/zap.png"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="final-cartoes">
+                <ul class="cartao-bandeiras">
+                        <li><a><img id="image" class="visa" src="./assets/visa.png"></a></li>
+                        <li><a><img id="image" class="mastercard" src="./assets/mastercad.png"></a></li>
+                        <li><a><img id="image" class="elo" src="./assets/elo.png"></a></li>
+                        <li><a><img id="image" class="american" src="./assets/american.png"></a></li>
+                        <li><a><img id="image" class="boleto" src="./assets/boleto.png"></a></li>
+                </ul>
+                <span class="dados-cnpj">
+                    2022 - Todos os direitos reservados - v2.14.7 <br>- CNPJ: 25400804/0001-09
+                </span>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script> AOS.init(); </script>
+    <script src="./buscar-home.js"></script>
+    <script src="./menu.js"></script>
+</body>
+</html>

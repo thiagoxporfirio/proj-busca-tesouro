@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+:root {
+    --input-error: red;
+    --button-disabled: #acacac;
+    --button-success: rgb(18, 151, 107);
+    --white: #fff;
+    --black: #303030;
+    --gray: #929292;
+    --light-gray: #cfcfcf;
+  }
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+body{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+
+@keyframes msgError{
+    form{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+#msgView{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 20px;
+    color: #3D3D3D;
+}
+
+#msgSuccess{
+    margin-top: 5px;
+    padding: 5px;
+    width: 25px;
+    height: 25px;
+    border: 3px solid #0F0;
+    border-radius: 100px;
+    border-top: 4px solid white;
+    animation: msgError 2s linear infinite;
+}
+
+#msgError{
+    display: none;
+    padding: 5px;
+    margin-top: 5px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: red;
+    font-size: 15px;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.w50{
+    width: 50%;
+    float: left;
+    padding-right: 15px;
+}
+
+.box{
+    display: flex;
+    width: 930px;
+}
+
+.img-box{
+    width: 170px;
+    margin-bottom: 25px;
+}
+
+.img-box img{
+    width: 100%;
+}
+
+.form-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(40px);
+    padding: 30px 40px;
+    border-radius: 0 20px 20px 0;
+}
+
+.form-box h2{
+    font-size: 30px;
+}
+
+.form-box p{
+    font-weight: bold;
+    color: #3D3D3D;
+}
+
+.form-box p a{
+    color: #0033a0;
+    text-decoration: none;
+}
+
+.form-box form{
+    margin: 20px 0;
+}
+form .input-group{
+    margin-bottom: 15px;
+}
+form .input-group label{
+    color: #3D3D3D;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+form .input-group input{
+    width: 100%;
+    height: 47px;
+    color: #32324f;
+    background-color: #ecf2f7;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    padding: 15px;
+    font-size: 15px;
+    color: #616161;
+    transition: all 0.4s ease;
+}
+
+form .input-group input:focus{
+    border-color: #0033a0;
+}
+
+.error{
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    background: #e71414;
+    color: #fff;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.loading{
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    background: #888888;
+    color: #fff;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.success{
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    background: #00a050;
+    color: #fff;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.submitButton{
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    background: #0033a0;
+    color: #fff;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.submitButton:hover {
+    background: #3286ca;
+}
+
+.submitButton:disabled {
+    background: var(--button-disabled);
+    cursor: not-allowed;
+  }
+  
+
+  .submitButton.success {
+    background: var(--button-success);
+  }
+  
+  .submitButton.error {
+    background: var(--input-error);
+  }
+
+@media (max-width:930px) {
+    
+    .box{
+        width: 700px;
+    }
+    .form-box{
+        width: 100%;
+        border-radius: 20px;
+    }
+}
+
+@media (max-width:500px) {
+    .w50{
+        width: 100%;
+        padding: 0;
+    }
+}

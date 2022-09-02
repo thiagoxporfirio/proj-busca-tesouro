@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" type="text/css" href="./procurados.css">
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+      <title>Carros procurados</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+          <a href="../index.html" class="logo1">
+              <img href="../index.html" class="logosite" src="../assets/logosite.png" alt="logo site">
+          </a>   
+            
+        <div class="mobile-menu">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+          <ul class="nav-list">
+            <li><a href="./carros_procurados.html">Carros</a></li>
+            <li><a href="../porqueutilizar/porque.html">Porque Utilizar?</a></li>
+            <li><a href="../assinatura/assinatura.html">Planos</a></li>
+            <li><a href="../comofunciona/comofunciona.html">Como Funciona</a></li>
+            <li class="btn1"><a class="bt1" href="../loginUser/login.html">LOGIN</a></li>
+            <li class="btn2"><a class="bt1" href="../cadastroUser/register.html">CADASTRE-SE</a></li>
+          </ul>
+        </nav>
+    </header>
+
+  <section>
+      <div  class="container-section1">
+        <div  class="filho-section1">
+          <h1>Carros que estão sendo procurados:</h1>
+          <h3>Nesta aba poderemos ver os carros que estão sendo procurados por nossos assinantes.</h3>
+          <span class="span-section1">Se voce ainda nao é um assinante, assine agora mesmo.</span>
+          <button class="btn1"><a class="aSection1" href="../assinatura/assinatura.html">Assinar</a></button>
+        </div>
+      </div>
+  </section>
+  <section>
+    <div class="container-form">
+      <form>
+        <select id="estado" onChange="atualizaSelect()">
+              <option value="OFF" selected disabled>Selecione o estado</option>
+              <option value="AC">Acre (AC)</option>
+              <option value="AL">Alagoas (AL)</option>
+              <option value="AP">Amapá (AP)</option>
+              <option value="AM">Amazonas (AM)</option>
+              <option value="BA">Bahia (BA)</option>
+              <option value="CE">Ceará (CE)</option>
+              <option value="DF">Distrito Federal (DF)</option>
+              <option value="ES">Espírito Santo (ES)</option>
+              <option value="GO">Goiás (GO)</option>
+              <option value="MA">Maranhão (MA)</option>
+              <option value="MT">Mato Grosso (MT)</option>
+              <option value="MS">Mato Grosso do Sul (MS)</option>
+              <option value="MG">Minas Gerais (MG)</option>
+              <option value="PA">Pará (PA)</option>
+              <option value="PB">Paraíba (PB)</option>
+              <option value="PR">Paraná (PR)</option>
+              <option value="PE">Pernambuco (PE)</option>
+              <option value="PI">Piauí (PI)</option>
+              <option value="RJ">Rio de Janeiro (RJ)</option>
+              <option value="RN">Rio Grande do Norte (RN)</option>
+              <option value="RS">Rio Grande do Sul (RS)</option>
+              <option value="RO">Rondônia (RO)</option>
+              <option value="RR">Roraima (RR)</option>
+              <option value="SC">Santa Catarina (SC)</option>
+              <option value="SP">São Paulo (SP)</option>
+              <option value="SE">Sergipe (SE)</option>
+              <option value="TO">Tocantins (TO)</option>
+          </select>
+          <div class="input-box">
+            <button class="submitButton" id="buscarEstado" type="submit">Buscar</button>
+          </div>
+      </form>  
+    </div>
+  </section>
+    <section>
+      <div id="posts" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine"></div>
+    </section>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init()</script>
+    <script src="./buscaCar.js"></script>
+    <script src="../menu.js"></script>
+  </body>
+</html>
