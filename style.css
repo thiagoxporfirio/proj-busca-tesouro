@@ -18,6 +18,19 @@
     100%{ transform: scale(1.08);}
 }
 
+.IdName{
+    color: white;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.IdName:hover{
+    color: #ffb400;
+    transition: all 0.4s ease;
+}
+
 #gameover{
     position: absolute;
     width: 100%;

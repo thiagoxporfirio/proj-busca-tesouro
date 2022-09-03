@@ -17,6 +17,19 @@
   cursor: not-allowed;
 }
 
+.IdName{
+  color: white;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.IdName:hover{
+  color: #ffb400;
+  transition: all 0.4s ease;
+}
+
 
 .submitButton.success {
   background: var(--button-success);
@@ -190,7 +203,7 @@ a {
     color: white;
 }
 
-  .btn1{
+  .btn{
     width: 100px;
     height: 40px;
     display: flex;
@@ -207,7 +220,7 @@ a {
     transition: all 0.4s ease;
 }
 
-.btn1:hover{
+.btn:hover{
     background: #1c63aa;
     transform: scale(1.08);
 }

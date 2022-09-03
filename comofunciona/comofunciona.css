@@ -16,6 +16,20 @@ body{
     height: 100vh;
 }
 
+.IdName{
+  color: white;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.IdName:hover{
+  color: #ffb400;
+  transition: all 0.4s ease;
+}
+
+
 p{
   margin-top: 20px;
   text-align: center;
