@@ -56,8 +56,7 @@ app.post("/create_preference", (req, res) => {
 		});
 
 
-
-
+		//Chamando a rota de feedback, que vai fazer um fetch e trocar a permissao do user com seus dados.
 		app.get('/feedback', function(req, res) {
 	
 			console.log(req.query.status)
@@ -79,30 +78,29 @@ app.post("/create_preference", (req, res) => {
 			  })
 				.then(function(response) {
 					
+					//Quando estiver tudo ok !!
 					setTimeout(() => {
-	
-						res.redirect('http://127.0.0.1:5500/SucessoPage/index.html')
-	
+						res.redirect('http://127.0.0.1:5501/SucessoPage/index.html')
 					}, 1000)
 					return response.json();
-					
 				})
 				.catch(function(error) {
 					console.log(error)
+					//Quando estiver algo errado !!
+					setTimeout(() => {
+						res.redirect('http://127.0.0.1:5501/ErrorPage/error.html')
+					}, 1000)
 				});
 				
-		}else{
-			//Quando estiver pendente
+		}
+		if(req.query.status == 'pending'){
+			//Quando estiver pendente !!
 			setTimeout(() => {
-				res.redirect('http://127.0.0.1:5502/index.html')
+				res.redirect('http://127.0.0.1:5501/Pendding/pendding.html')
 			}, 1000)
 		}})
 	
 });
-
-
-
-
 
 
 // app.get('/feedback', function(req, res) {
