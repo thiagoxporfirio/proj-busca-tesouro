@@ -8,6 +8,15 @@ const pegaNomeEId = () => {
     let identidadeUser = JSON.parse(localStorage.getItem('_DadosUser2') || '{}')
     const usuarioid = identidadeUser.dados.UserId
     const Name = identidadeUser.dados.Name
+    const Permission = identidadeUser.dados.Permission
+
+    console.log(Permission)
+
+    if(Permission == 0){
+        const btnCadastraCarro = document.querySelector('.cadastracarro')
+
+        btnCadastraCarro.setAttribute('style', 'display:none')
+    }
 
 
     btncadastro.setAttribute('style', 'display:none')
@@ -24,5 +33,31 @@ const pegaNomeEId = () => {
     document.getElementById('openDados').innerHTML = postElements
 
 }
-
 pegaNomeEId()
+
+const openDados = document.querySelector('#openDados')
+const btnSair = document.querySelector('.btnsair')
+const btnLogout = document.querySelector('.logout')
+
+if(openDados){
+    openDados.addEventListener('click', () => {
+        const divPainel = document.querySelector('.containerCard')
+
+        divPainel.setAttribute('style', 'display:block')
+    })
+}
+
+if(btnSair){
+    btnSair.addEventListener('click', () => {
+        const divPainel = document.querySelector('.containerCard')
+        divPainel.setAttribute('style', 'display:none')
+    })
+}
+
+if(btnLogout){
+    btnLogout.addEventListener('click', () => {
+        
+        localStorage.clear();
+        window.location.href = '/loginUser/login.html'
+    })
+}

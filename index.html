@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css" type="text/css">
+    <link rel="stylesheet" href="painel.css" type="text/css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <title>Projeto consulta</title>
@@ -32,13 +33,30 @@
           </ul>
         </nav>
     </header>
-      <div id="gameover">
-        <button id="fechar">X</button>
-        <div class="titulo">
-            Parabéns, você e campeão achou um carro procurado!!
+        <div id="gameover">
+            <button id="fechar">X</button>
+            <div class="titulo">
+                Parabéns, você e campeão achou um carro procurado!!
+            </div>
+            <button id="btn-sucesso">Entre em contato</button>
         </div>
-        <button id="btn-sucesso">Entre em contato</button>
-    </div>
+        <div class="containerCard" data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine">
+            <!-- Painel Card -->
+            <div class="card">
+                <h1 class="h1card">Olá,<span class=""></span></h1>
+                <div class="content">
+                    <p class="pcard">
+                        Voçê esta no painel de controle<br>
+                    </p>
+                    <div class="botoes">
+                    <a class="cadastracarro" href="./assinatura/cadastrocarro.html">Cadastrar carros</a><a class="btnsair" href="#">Fechar</a>
+                    </div>
+                    <button class="logout">Logout</button>
+                </div>
+            </div>
+        </div>
     <section class="parte1">
         <div class="containerh1">
             <h1 id="titulo1">Consulte se um veiculo esta sendo PROCURADO!</h1>

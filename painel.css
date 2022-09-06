@@ -1,0 +1,91 @@
+.containerCard {
+   z-index: 99;
+   position: absolute;
+   margin-left: 75%;
+   display: none;
+   transition: 0.5s;
+}
+
+.containerCard .card {
+
+    padding: 10px;
+    width: 300px;
+    background-color: #fff;
+    border: 1px solid black;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.5s;
+    text-align: center;
+}
+
+
+.containerCard .card h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+}
+
+.containerCard .card .content {
+    text-align: center;
+}
+
+.pcard {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #666;
+    transition: 0.5s;
+}
+
+.containerCard .card .content a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 7px;
+    text-decoration: none;
+    transition: 0.5s;
+    outline: none;
+    margin-top: 20px;
+}
+
+.btnsair{
+    margin-left: 5px;
+}
+
+.containerCard .card:hover {
+    background-color: #0033a0;
+    color: white;
+    margin-top: -10px;
+    box-shadow: 2px 20px 25px #dca52e5d;
+    border-color: #0033a0;
+}
+
+
+.containerCard .card:hover .content .pcard {
+    color: white;
+}
+
+.containerCard .card:hover .h1card{
+    color: white;
+}
+
+.containerCard .card:hover .content a{
+    color:black;
+    background-color: white;
+}
+
+.logout{
+    padding: 10px;
+    margin-top: 5px;
+    background-color: #000;
+    color: white;
+    border-radius: 7px;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+}
+
+.logout:hover{
+    color: black;
+    background-color: white;
+    transition: 0.5s;
+}
