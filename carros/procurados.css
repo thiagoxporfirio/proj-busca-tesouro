@@ -23,6 +23,8 @@
   padding: 0;
   cursor: pointer;
   margin-left: 20px;
+  font-family: 'Kdam Thmor Pro', sans-serif;
+  font-weight: lighter;
 }
 
 .IdName:hover{
@@ -76,14 +78,13 @@ span{
     color: #ca0505;
 }
 
-a {
-    font-family: 'Noto Sans', sans-serif;
-    text-align: center;
+a{
+   font-family: 'Noto Sans', sans-serif;
+   text-align: center;
     color: white;
     text-decoration: none;
     transition: 0.3s;
-  }
-  
+}
   a:hover {
     opacity: 0.7;
   }
@@ -203,14 +204,14 @@ a {
     color: white;
 }
 
-  .btn{
+.btn{
     width: 100px;
     height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
     background: #ffb400;
     border-radius: 5px;
     outline: none;
@@ -218,6 +219,7 @@ a {
     color: white;
     cursor: pointer;
     transition: all 0.4s ease;
+    font-weight: bold;
 }
 
 .btn:hover{
@@ -334,7 +336,8 @@ section .filho-section1{
 
 .aSection1{
   font-weight: bold;
-  font-size: 0.95rem;
+  font-size: 1rem;
+
 }
 
 section form{
@@ -381,8 +384,9 @@ section form{
 
 p{
   font-family: 'Noto Sans', sans-serif;
-  font-weight: bold;
   color: #2a2a2a;
+  font-weight: bolder;
+
 }
 
 select{
@@ -390,6 +394,19 @@ select{
   border: 2px solid grey;
   font-family: 'Noto Sans', sans-serif;
 }
+
+
+
+
+
+
+
+@media (max-width: 999px){
+  .card{
+     margin-left: -80%;
+  }
+}
+
 
 @media (max-width:380px) {
   section form{

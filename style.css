@@ -663,10 +663,10 @@ span{
     }
 
 }
-@media (max-width: 998px){
-    .logosite{
+@media (max-width: 999px){
+    .card{
+       margin-left: -80%;
     }
-    
 }
 
 @media (max-width: 763px){

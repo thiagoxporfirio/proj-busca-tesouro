@@ -22,6 +22,8 @@ body{
   padding: 0;
   cursor: pointer;
   margin-left: 20px;
+  font-family: 'Kdam Thmor Pro', sans-serif;
+  font-weight: lighter;
 }
 
 .IdName:hover{
@@ -283,6 +285,20 @@ section .container-filho2 ul li img{
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 2560px){
     .none{
         display: none;
@@ -290,11 +306,12 @@ section .container-filho2 ul li img{
 }
 
 
-@media (max-width: 998px){
-  .logosite{
+@media (max-width: 999px){
+  .card{
+     margin-left: -80%;
   }
-  
 }
+
 
 @media (max-width: 763px){
     html{

@@ -1,6 +1,4 @@
 
-
-
 const init = () => {
 
     let identidadeUser = JSON.parse(localStorage.getItem('_DadosUser2') || '{}')
