@@ -10,7 +10,7 @@ const pegaNomeEId = () => {
     const Name = identidadeUser.dados.Name
     const Permission = identidadeUser.dados.Permission
 
-    console.log(Permission)
+    console.log('Permission: ' + Permission)
 
     if(Permission == 0){
         const btnCadastraCarro = document.querySelector('.cadastracarro')

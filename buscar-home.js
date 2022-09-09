@@ -3,12 +3,10 @@ const init = () => {
 
     let identidadeUser = JSON.parse(localStorage.getItem('_DadosUser2') || '{}')
     const usuarioid = identidadeUser.dados.UserId
-    console.log(usuarioid)
+    console.log('UserID: ' + usuarioid)
 
     const btnSubmit_Buscar = document.querySelector('#btnSubmit')
     const inputPlaca = document.querySelector('.input1')
-
-    console.log(inputPlaca)
 
     const btnFechar = document.querySelector('#fechar')
     const btnSucesso = document.querySelector('#btn-sucesso')
