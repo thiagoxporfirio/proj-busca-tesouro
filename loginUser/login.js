@@ -88,7 +88,7 @@
                     localStorage.setItem('_DadosUser2', JSON.stringify(dadosdoUser))
 
                 }).catch(error => {
-                    console.log(error)
+                    console.log(error.message)
                     errorHandler()
                 })
             }, 1000)

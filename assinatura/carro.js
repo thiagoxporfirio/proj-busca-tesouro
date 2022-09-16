@@ -213,7 +213,7 @@ const init = () => {
                     console.log(dados)
 
                 }).catch(error => {
-                    console.log(error)
+                    console.log(error.message)
                 })
 
 

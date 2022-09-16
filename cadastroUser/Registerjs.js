@@ -124,7 +124,7 @@ const init = () => {
           localStorage.setItem('_DadosUser', JSON.stringify(identidadeUser));
           
         }).catch(error => {
-            console.log(error)
+            console.log(error.message)
         })
       }, 1000)
     

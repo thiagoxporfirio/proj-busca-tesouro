@@ -83,7 +83,7 @@ console.log(usuarioid)
                     document.getElementById('posts').innerHTML = postElements
 
                 }).catch(error => {
-                    console.log(error)
+                    console.log(error.message)
                     errorHandler()
                 })
             }, 1500)
