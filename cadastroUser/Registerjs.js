@@ -38,7 +38,7 @@ const init = () => {
   const validateNomeCompleto = (event) => {
     const input = event.currentTarget;
 
-    if(input.value.length < 8) {
+    if(input.value.length < 12) {
           submitButton.setAttribute("disabled", "disabled");
           input.classList.add('error');
       }else {
@@ -65,9 +65,9 @@ const init = () => {
     submitButton.classList.add('success');
     submitButton.textContent = "Sucesso! :)";
 
-    setTimeout(()=>{
-      window.location.href = '../loginUser/login.html'
-    }, 2000)
+    // setTimeout(()=>{
+    //   window.location.href = '../loginUser/login.html'
+    // }, 2000)
       
    }
       

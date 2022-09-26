@@ -38,6 +38,10 @@ body{
     }
 }
 
+#nome{
+    text-transform: capitalize;
+}
+
 #msgView{
     display: none;
     align-items: center;

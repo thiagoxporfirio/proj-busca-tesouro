@@ -25,7 +25,7 @@ let validConfirmSenha = false
 
 
   NomeCompleto.addEventListener('keyup', () => {
-    if(NomeCompleto.value.length <= 6){
+    if(NomeCompleto.value.length <= 11){
           labelNomeCompleto.setAttribute('style', 'color: red')
           labelNomeCompleto.innerHTML = 'Nome Completo *Insira no minimo 6 caracteres'
           NomeCompleto.setAttribute('style', 'border-color: red')
@@ -122,23 +122,23 @@ let validConfirmSenha = false
     let senha = document.getElementById("senha").value
     let confirmsenha = document.getElementById("confirmSenha").value
 
-    if(senha == "" && senha <= 5){
-        labelSenha.setAttribute('style', 'color: red')
-        labelSenha.innerHTML = 'Senha contem menos de 5 caracteres'
-        formcadastro.senha.focus()
-    }
+    // if(senha == "" && senha <= 5){
+    //     labelSenha.setAttribute('style', 'color: red')
+    //     labelSenha.innerHTML = 'Senha contem menos de 5 caracteres'
+    //     // formcadastro.senha.focus()
+    // }
 
-    if(confirmsenha == "" && confirmsenha <= 5){
-        labelConfirmSenha.setAttribute('style', 'color: red')
-        labelConfirmSenha.innerHTML = 'Senha contem menos de 5 caracteres'
-        formcadastro.rep_senha.focus()
-    }
+    // if(confirmsenha == "" && confirmsenha <= 5){
+    //     labelConfirmSenha.setAttribute('style', 'color: red')
+    //     labelConfirmSenha.innerHTML = 'Senha contem menos de 5 caracteres'
+    //     // formcadastro.rep_senha.focus()
+    // }
 
-    if(senha != confirmsenha){
-        labelSenha.setAttribute('style', 'color: red')
-        labelSenha.innerHTML = 'Senhas divergentes'
-        labelConfirmSenha.setAttribute('style', 'color: red')
-        labelConfirmSenha.innerHTML = 'Senhas divergentes'
-        formcadastro.rep_senha.focu()
-    }
+    // if(senha !== confirmsenha){
+    //     labelSenha.setAttribute('style', 'color: red')
+    //     labelSenha.innerHTML = 'Senhas divergentes'
+    //     labelConfirmSenha.setAttribute('style', 'color: red')
+    //     labelConfirmSenha.innerHTML = 'Senhas divergentes'
+    // //     formcadastro.rep_senha.focu()
+    // }
 
