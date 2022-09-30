@@ -3,8 +3,13 @@
         const inputEmail = document.querySelector('#email')
         const inputPassword = document.querySelector('#password')
         const submitButton = document.querySelector('.submitButton')
+        
 
-        console.log(inputEmail, inputPassword, submitButton)
+
+        const errorValidateEmail = () => {
+            const errorValidate = document.querySelector('.errorvalidate')
+            errorValidate.setAttribute('style', 'display:block')
+        }
 
         const validateEmail = (event) => {
             const input = event.currentTarget;
@@ -70,22 +75,25 @@
                         password: inputPassword.value
                     })
 
-                }).then((response) => {
-                    if (response.status !== 200){
-                        return errorHandler()
-                    }else{
-                        console.log(response)
-                        successHandler()
-                        return response.json()  
-                    }
-                }).then((data) => {
-                    const dadosUser = data
-                    console.log(dadosUser)
-                    
-                    let dadosdoUser = JSON.parse(localStorage.getItem('_DadosUser2') || '{}')
-                    dadosdoUser = {... dadosdoUser, dados: dadosUser}
+                }).then(async (response) => {
+                    let responseTextFromError = await response.text()             
+                   
+                    console.log(responseTextFromError)
 
-                    localStorage.setItem('_DadosUser2', JSON.stringify(dadosdoUser))
+                    if (response.status !== 200){
+                        if(responseTextFromError == "Validate User: error user in validation"){
+                            errorHandler()
+                            return errorValidateEmail()
+                    
+                        }
+                        errorHandler()
+                    }else{
+                        let dadosdoUser = JSON.parse(localStorage.getItem('_DadosUser2') || '{}')
+                        dadosdoUser = {... dadosdoUser, dados: JSON.parse(responseTextFromError)}
+                        localStorage.setItem('_DadosUser2', JSON.stringify(dadosdoUser))
+
+                        return successHandler()
+                    }
 
                 }).catch(error => {
                     console.log(error.message)
@@ -100,52 +108,5 @@
 
 window.onload = init
 
-
-
-//     function fazLogin(url, body){
-
-//         console.log(body)
-//         debugger
-
-//         fetch(url, {
-//             method: "POST",
-//             headers: {"Content-Type": "application/json",},
-//             body: JSON.stringify(body)
-//     })
-//         .then(response => {
-//             console.log(response)
-//             return response.text()
-//         })
-//         .then(data => {
-//             console.log(data)
-//         })
-    
-//         .catch(error => {
-//             console.log(error)
-//         })
-//     }
-
-
-//    function login(event){
-//     event.preventDefault()
-
-//     let url = 'http://localhost:1323/login'
-
-//     const email = document.getElementById('email').value
-//     const senha = document.getElementById('password').value
-
-//     console.log(email)
-//     console.log(senha)
-
-//     debugger
-
-//     let body = {
-//         "username": email, 
-//         "password": senha,
-//      }
-
-//     fazLogin(url, body)
-
-// }
 
 
