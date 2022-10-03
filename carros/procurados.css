@@ -12,6 +12,23 @@
   --light-gray: #cfcfcf;
 }
 
+.errorvalidate{
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  font-weight: 400;
+  border: none;
+  font-size: 17px;
+  color: black;
+  background-color: #e7141480;
+  border-radius: 5px;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 10px;
+  display: none;
+}
+
+
 .submitButton:disabled {
   background: var(--button-disabled);
   cursor: not-allowed;

@@ -2,7 +2,7 @@
 const init = () => {
 
     let identidadeUser = JSON.parse(localStorage.getItem('_DadosUser2') || '{}')
-    const usuarioid = identidadeUser.dados.UserId
+    // const usuarioid = identidadeUser.dados.UserId
 
     const btnSubmit_Buscar = document.querySelector('#btnSubmit')
     const inputPlaca = document.querySelector('.input1')

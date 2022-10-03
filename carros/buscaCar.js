@@ -1,6 +1,6 @@
 let identidadeUser = JSON.parse(localStorage.getItem('_DadosUser2') || '{}')
 const usuarioid = identidadeUser.dados.UserId
-console.log(usuarioid)
+
 
     const dadosForm = {
         state: '',
@@ -9,6 +9,11 @@ console.log(usuarioid)
 
     const inputBuscar = document.querySelector('#buscarEstado')
     const select = document.querySelector('#estado')
+    const messageErrorLogin = document.querySelector('.errorvalidate')
+
+    const errorHandlerLogin = () => {
+        messageErrorLogin.setAttribute('style', 'display:flex')
+    }
 
     const successHandler = () => {
         inputBuscar.classList.remove('loading');
@@ -48,6 +53,9 @@ console.log(usuarioid)
                     body: JSON.stringify(dadosForm)
                 }).then((response) => {
                     if(response.status !== 200){
+                        if(dadosForm.userId == ""){
+                            errorHandlerLogin()
+                        }
                         return errorHandler()
                     }else{
                         successHandler()
