@@ -3,7 +3,6 @@ const init = () => {
 
     let identidadeUser = JSON.parse(localStorage.getItem('_DadosUser2') || '{}')
     const usuarioid = identidadeUser.dados.UserId
-    console.log('UserID: ' + usuarioid)
 
     const btnSubmit_Buscar = document.querySelector('#btnSubmit')
     const inputPlaca = document.querySelector('.input1')
@@ -56,7 +55,6 @@ const init = () => {
                     headers: {'Content-type': 'application/json'},
                     body: JSON.stringify({
                         placa: inputPlaca.value,
-                        userId: usuarioid
                     })
                 }).then((response) => {
                     if(response.status !== 200){

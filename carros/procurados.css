@@ -401,11 +401,11 @@ select{
 
 
 
-@media (max-width: 999px){
+/* @media (max-width: 999px){
   .card{
      margin-left: -80%;
   }
-}
+} */
 
 
 @media (max-width:380px) {

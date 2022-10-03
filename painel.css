@@ -7,25 +7,27 @@
 }
 
 .containerCard .card {
-
-    padding: 10px;
-    width: 300px;
+    width: 250px;
     background-color: #fff;
-    border: 1px solid black;
-    border-radius: 20px;
+    border: 1px solid rgba(153, 150, 150, 0.363);
+    border-radius: 10px;
     overflow: hidden;
     transition: 0.5s;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 20px 25px #5f5f5d5d;
 }
 
 
 .containerCard .card h1 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 2rem;
+    font-size: 1.1rem;
 }
 
 .containerCard .card .content {
     text-align: center;
+    flex-direction: column;
+    display: flex;
 }
 
 .pcard {
@@ -34,31 +36,56 @@
     transition: 0.5s;
 }
 
-.containerCard .card .content a {
-    position: relative;
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #000;
-    color: #fff;
-    border-radius: 7px;
+.cadastracarro{
+    background-color: #fff;
+    color: #000;
     text-decoration: none;
-    transition: 0.5s;
-    outline: none;
-    margin-top: 20px;
+    transition: 0.2s;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 14px;
+    font-size: 15px;
+    border: none;
+}
+
+.cadastracarro:hover{
+    background-color: #74777b21;
+    cursor: pointer;
+}
+
+.iconcard{
+    width: 25px;
+    padding-right: 5px;
 }
 
 .btnsair{
-    margin-left: 5px;
+    background-color: #fff;
+    color: #0a0c07;
+    text-decoration: none;
+    transition: 0.2s;
+    outline: none;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 14px;
+    font-size: 15px;
+    display: flex;
+    border: none;
 }
 
-.containerCard .card:hover {
-    background-color: #0033a0;
-    color: white;
-    margin-top: -10px;
-    box-shadow: 2px 20px 25px #dca52e5d;
-    border-color: #0033a0;
+.btnsair:hover{
+    background-color: #74777b15;
+    cursor: pointer;
 }
-
 
 .containerCard .card:hover .content .pcard {
     color: white;
@@ -68,24 +95,29 @@
     color: white;
 }
 
-.containerCard .card:hover .content a{
-    color:black;
-    background-color: white;
-}
-
 .logout{
-    padding: 10px;
-    margin-top: 5px;
-    background-color: #000;
-    color: white;
-    border-radius: 7px;
-    cursor: pointer;
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
     border: none;
+    transition: 0.2s;
+    outline: none;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 14px;
+    font-size: 15px;
+    border-top: 1px solid #74777b80;
+    font-weight: bolder;
 }
 
 .logout:hover{
     color: black;
-    background-color: white;
-    transition: 0.5s;
+    background-color: #74777b15;
+    transition: 0.2s;
+    cursor: pointer;
 }

@@ -38,6 +38,7 @@ pegaNomeEId()
 const openDados = document.querySelector('#openDados')
 const btnSair = document.querySelector('.btnsair')
 const btnLogout = document.querySelector('.logout')
+const btncadastro = document.querySelector('.iconscard')
 
 if(openDados){
     openDados.addEventListener('click', () => {
@@ -59,5 +60,11 @@ if(btnLogout){
         
         localStorage.clear();
         window.location.href = '/loginUser/login.html'
+    })
+}
+
+if(btncadastro){
+    btncadastro.addEventListener('click', ()=> {
+        window.location.href = '/assinatura/cadastrocarro.html'
     })
 }
