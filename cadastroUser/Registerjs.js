@@ -99,11 +99,11 @@ const init = () => {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({
-                  name: NomeCompleto.value,
-                  username: Apelido.value,
-                  password: Senha.value,
-                  email: Email.value,
-                  telefone: Telefone.value
+                  name: inputNomeCompleto.value,
+                  username: inputUsername.value,
+                  password: inputSenha.value,
+                  email: inputEmail.value,
+                  telefone: inputTelefone.value
             })
         })
         .then(response => {
