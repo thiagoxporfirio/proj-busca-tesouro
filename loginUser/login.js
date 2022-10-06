@@ -67,11 +67,11 @@
 
                 
 
-                fetch('https://calm-woodland-38509.herokuapp.com/login', {
+                fetch('https://dry-chamber-14632.herokuapp.com/login', {
                     method: 'POST',
                     headers: {'Content-type': 'application/json'},
                     body: JSON.stringify({
-                        username: inputEmail.value,
+                        email: inputEmail.value,
                         password: inputPassword.value
                     })
 

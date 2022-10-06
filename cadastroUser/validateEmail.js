@@ -59,7 +59,7 @@ const init = () => {
 
             setTimeout( () => {
 
-                fetch ('https://calm-woodland-38509.herokuapp.com/validation', {
+                fetch ('https://dry-chamber-14632.herokuapp.com/validation', {
                 method: "POST",
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify({
