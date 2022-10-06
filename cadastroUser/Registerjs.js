@@ -66,7 +66,7 @@ const init = () => {
     submitButton.textContent = "Sucesso! :)";
 
     setTimeout(()=>{
-      window.location.href = './cadastroUser/validateEmail.html'
+      window.location.href = './validateEmail.html'
     }, 2000)
       
    }
