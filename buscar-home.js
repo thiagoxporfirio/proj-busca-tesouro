@@ -50,7 +50,7 @@ const init = () => {
 
             setTimeout(() => {
                 
-                fetch('http://localhost:1323/car/placa', {
+                fetch('https://calm-woodland-38509.herokuapp.com/car/placa', {
                     method: 'POST',
                     headers: {'Content-type': 'application/json'},
                     body: JSON.stringify({

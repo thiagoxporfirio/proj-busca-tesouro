@@ -183,7 +183,7 @@ const init = () => {
             setTimeout(() => {
 
                 
-                fetch('http://localhost:1323/car/create', {
+                fetch('https://calm-woodland-38509.herokuapp.com/car/create', {
                     method: 'POST',
                     headers: {'Content-type': 'application/json'},
                     body: JSON.stringify({
