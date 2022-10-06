@@ -669,12 +669,6 @@ span{
     }
 }
 
-@media (max-width: 763px){
-    html{
-        font-size: 70%;
-    }
-}
-
 
 @media (max-width: 810px){
     
