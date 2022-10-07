@@ -9,7 +9,7 @@ function setCookie(nome,valor,dias) {
 }
 
 function getCookie(nome) {
-    var nomeCookie = nome + "=";
+    var nomeCookie = nome.UserId + "=";
     var ca = document.cookie.split(';');
     for(var i=0;i < ca.length;i++) {
         var c = ca[i];

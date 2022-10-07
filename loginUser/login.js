@@ -76,7 +76,21 @@
                     })
 
                 }).then(async (response) => {
-                    let responseTextFromError = await response.text()             
+                    let responseTextFromError = await response.text()
+                    
+                    function setCookie(nome,valor,dias) {
+                        var nome = "CookieDados"
+                        var valor = responseTextFromError
+
+                        var validade = "";
+                    
+                        // if (days) {
+                        //     var date = new Date();
+                        //     date.setTime(date.getTime() + (days*24*60*60*1000));
+                        //     validade = "; expires=" + date.toUTCString();
+                        // }
+                        document.cookie = nome + "=" + (valor || "")  + validade + "; path=/";
+                    }
                    
                     console.log(responseTextFromError)
 
@@ -86,12 +100,16 @@
                             return errorValidateEmail()
                     
                         }
+                        
                         errorHandler()
                     }else{
                         let dadosdoUser = JSON.parse(localStorage.getItem('_DadosUser2') || '{}')
                         dadosdoUser = {... dadosdoUser, dados: JSON.parse(responseTextFromError)}
                         localStorage.setItem('_DadosUser2', JSON.stringify(dadosdoUser))
+                        let usuarioid = dadosdoUser.dados
 
+
+                        setCookie()
                         return successHandler()
                     }
 
