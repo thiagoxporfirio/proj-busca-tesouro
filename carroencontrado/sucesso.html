@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Game over, voce achou</title>
+</head>
+<body>
+    <div class="box">
+        
+        <div class="form-box">
+            <div class="position-img">
+                <img class="img-box" src="../assets/logoazul.png" alt="logo">
+            </div>
+            <h2>Voce achou um veiculo procurado, parabéns.</h2>
+            <p> Agora precisamos que preencha alguns dados corretos e importantes do veiculo achado para que possamos validar e entrar em contato.<br><br>
+            Todos esses dados serao enviados ao nosso email, assim que validados entraremos em contato. Caso tudo esteja correto em seguida recebera sua recompensa por ter nos ajudado a achar o carro de um de nossos clientes.</p>
+            
+                <div id="msgError" style="display: none;">Preencha todos os campos corretamente antes de cadastrar!!</div>
+                <div class="boxborder">
+                    <form>
+                        <div class="input-group">
+                            <label for="nome" id="LabelNomeCompleto"> Nome Completo</label>
+                            <input type="text" id="NomeCompleto" placeholder="Digite o seu nome completo" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label id="LabelPlaca" for="Placa"> Placa</label>
+                            <input type="text" id="Placa" placeholder="Placa do veiculo encontrado" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="MarcaeModelo" id="LabelMarcaeModelo">Marca e Modelo</label>
+                            <input type="text" id="MarcaeModelo" placeholder="EX: AUDI/A3 AMBITION" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="estado" id="LabelEstado">Estado</label>
+                            <input type="text" id="Estado" placeholder="Ex: SP" name="" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="Municipio" id="LabelMunicipio">Município</label>
+                            <input type="text" id="Municipio" placeholder="Ex: Osasco" name="" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="fotos" id="LabelFotos">Minimo 04 fotos do carro (Frente e Traz)</label>
+                            <input type="file" id="filename" name="arquivos" class="putImg" accept="image/png, image/jpeg"  multiple />
+                        </div>
+
+                        <div class="input-group">
+                            <label for="Descricao" id="LabelDescricao">Descricao</label>
+                            <textarea id="TextDescricao" name="story" rows="5" cols="33"></textarea>
+                        </div>
+
+                        <div class="input-group">
+                            <button class="submitButton" type="submit">CADASTRAR</button>
+                        </div>
+                    </form>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="./app.js"></script>
+</body>
+</html>

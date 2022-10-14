@@ -14,8 +14,12 @@ const pegaNomeEId = () => {
 
     if(Permission == 0){
         const btnCadastraCarro = document.querySelector('.cadastracarro')
+        const btnmeuSaldo = document.querySelector('.meuSaldo')
+        const btnMeusVeiculos = document.querySelector('.meusVeiculos')
 
         btnCadastraCarro.setAttribute('style', 'display:none')
+        btnmeuSaldo.setAttribute('style', 'display:none')
+        btnMeusVeiculos.setAttribute('style', 'display:none')
     }
 
 
@@ -38,7 +42,9 @@ pegaNomeEId()
 const openDados = document.querySelector('#openDados')
 const btnSair = document.querySelector('.btnsair')
 const btnLogout = document.querySelector('.logout')
-const btncadastro = document.querySelector('.iconscard')
+const btncadastra_Carro = document.querySelector('#cadastroDeCarros')
+const btnmeuSaldo = document.querySelector('#meuSaldo')
+const btnMeusVeiculos = document.querySelector('#meusVeiculos')
 
 if(openDados){
     openDados.addEventListener('click', () => {
@@ -63,8 +69,32 @@ if(btnLogout){
     })
 }
 
-if(btncadastro){
-    btncadastro.addEventListener('click', ()=> {
+if(btncadastra_Carro){
+    btncadastra_Carro.addEventListener('click', ()=> {
         window.location.href = '/assinatura/cadastrocarro.html'
+    })
+}
+
+if(btnmeuSaldo){
+    btnmeuSaldo.addEventListener('click', () => {
+        const cardMeuSaldoValidacao = document.getElementById('cardMeuSaldo').style.display
+        const cardMeuSaldo = document.querySelector('#cardMeuSaldo')
+
+        if(cardMeuSaldoValidacao){
+            
+            cardMeuSaldo.removeAttribute('style', 'display:none')
+           
+        }
+        else{
+            cardMeuSaldo.style.display = "flex"
+        
+        }
+    })
+}
+
+
+if(btnMeusVeiculos){
+    btnMeusVeiculos.addEventListener('click', () => {
+        window.location.href = '/carrosuser/seucarro.html'
     })
 }

@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Rozha+One&display=swap');
+
+:root {
+    --input-error: red;
+    --button-disabled: #acacac;
+    --button-success: rgb(18, 151, 107);
+    --white: #fff;
+    --black: #303030;
+    --gray: #929292;
+    --light-gray: #cfcfcf;
+}
+
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    height: 100vh;
+}
+
+h3{
+    font-family: 'Noto Sans', sans-serif;
+    text-align: center;
+}
+
+
+#imgVoltar{
+    padding: 15px;
+    cursor: pointer;
+    width:90px;
+    height: 80px;
+}
+#imgVoltar:hover{
+
+    background-color: #74777b21;
+}
+.img-voltar{
+    width: 40px;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 50px;
+    align-items: center;
+}
+
+.btnCarros{
+    background: #ffb400;
+    padding: 15px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.btnCarros:hover{
+    background-color:#1c63aa;
+    transform: scale(1.01);
+    color: white;
+}
+
+.content_fetch{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.btnCarros.success {
+    background: var(--button-success);
+  }
+  
+  .btnCarros.error {
+    background: var(--input-error);
+  }

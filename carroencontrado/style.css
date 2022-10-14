@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+:root {
+    --input-error: red;
+    --button-disabled: #acacac;
+    --button-success: rgb(18, 151, 107);
+    --white: #fff;
+    --black: #303030;
+    --gray: #929292;
+    --light-gray: #cfcfcf;
+  }
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+body{
+    background-color: #ebe7e7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    min-height: 100vh;
+}
+
+.box{
+    width: 930px;
+}
+
+.position-img{
+    justify-content: center;
+    display: flex;
+}
+.img-box{
+    width: 170px;
+    margin-bottom: 25px;
+}
+
+.img-box img{
+    width: 100%;
+}
+
+.form-box{
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    backdrop-filter: blur(40px);
+    padding: 15px 20px;
+    border-radius: 0 20px 20px 0;
+}
+
+.form-box h2{
+    font-size: 30px;
+    text-align: center;
+    color: rgb(9, 196, 65);
+}
+
+.form-box p{
+    font-weight: bold;
+    color: #3D3D3D;
+    text-align: start;
+    margin-top: 10px;
+}
+
+.form-box p a{
+    color: #0033a0;
+    text-decoration: none;
+}
+
+.form-box form{
+    margin: 20px 0;
+}
+form .input-group{
+    margin-bottom: 15px;
+}
+form .input-group label{
+    color: #0033a0;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+form .input-group input{
+    width: 100%;
+    height: 47px;
+    color: black;
+    font-weight: bold;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 15px;
+    transition: all 0.4s ease;
+    outline: none;
+}
+
+
+textarea{
+    width: 100%;
+    height: 150px;
+    color: black;
+    font-weight: bold;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 15px;
+    transition: all 0.4s ease;
+    outline: none;
+}
+
+.submitButton{
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    background: #0033a0;
+    color: #fff;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.submitButton:hover {
+    background: #3286ca;
+}
+
+.submitButton:disabled {
+    background: var(--button-disabled);
+    cursor: not-allowed;
+  }
+  
+
+  .submitButton.success {
+    background: var(--button-success);
+  }
+  
+  .submitButton.error {
+    background: var(--input-error);
+  }

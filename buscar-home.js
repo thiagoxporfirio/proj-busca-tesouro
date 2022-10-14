@@ -73,6 +73,34 @@ const init = () => {
             }, 1500);
         })
     }
+
+    let btn_gameover = document.querySelector('#btn-sucesso')
+    if(btn_gameover){
+        btn_gameover.addEventListener('click', () => {
+            window.location.href = ''
+        })
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 

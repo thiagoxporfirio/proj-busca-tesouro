@@ -63,6 +63,11 @@
     padding-right: 5px;
 }
 
+.iconscardv2{
+    width: 25px;
+    padding-right: 5px;
+}
+
 .btnsair{
     background-color: #fff;
     color: #0a0c07;
@@ -120,4 +125,30 @@
     background-color: #74777b15;
     transition: 0.2s;
     cursor: pointer;
+}
+
+
+#cardMeuSaldo{
+    
+    z-index: 99;
+    position: absolute;
+    display:none;
+    justify-content: flex-end;
+    transition: 0.5s;
+     
+}
+
+.card_meusaldo {
+    width: 250px;
+    background-color: #fff;
+    border: 1px solid rgba(153, 150, 150, 0.363);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.5s;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 20px 25px #5f5f5d5d;
+    margin-left: 10%;
+    padding: 20px;
 }
