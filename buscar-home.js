@@ -66,9 +66,6 @@ const init = () => {
 
             btnSubmit_Buscar.textContent = "Buscando..."
 
-            let identidadeUser = JSON.parse(localStorage.getItem('_DadosUser2') || '{}')
-            let usuarioid = identidadeUser.dados.UserId
-
             setTimeout(() => {
                 
                 fetch('https://dry-chamber-14632.herokuapp.com/car/placa', {
@@ -83,6 +80,9 @@ const init = () => {
 
                     }
                     if(response.status == 200){
+                        let identidadeUser = JSON.parse(localStorage.getItem('_DadosUser2') || '{}')
+                        let usuarioid = identidadeUser.dados.UserId
+
                         if(typeof usuarioid === "undefined"){
                             successFound()
                         }else{
