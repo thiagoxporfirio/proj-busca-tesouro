@@ -14,17 +14,15 @@ const pegaNomeEId = () => {
 
     if(Permission == 0){
         const btnCadastraCarro = document.querySelector('.cadastracarro')
-        const btnmeuSaldo = document.querySelector('.meuSaldo')
-        const btnMeusVeiculos = document.querySelector('.meusVeiculos')
+        const btnmeuSaldo = document.querySelector('#meuSaldo')
+        const btnMeusVeiculos = document.querySelector('#meusVeiculos')
 
         btnCadastraCarro.setAttribute('style', 'display:none')
         btnmeuSaldo.setAttribute('style', 'display:none')
         btnMeusVeiculos.setAttribute('style', 'display:none')
-    }
 
-
-    btncadastro.setAttribute('style', 'display:none')
-    btnlogin.setAttribute('style', 'display:none')
+        btncadastro.setAttribute('style', 'display:none')
+        btnlogin.setAttribute('style', 'display:none')
 
     
         let postElements = ''
@@ -34,7 +32,62 @@ const pegaNomeEId = () => {
     
 
 
-    document.getElementById('openDados').innerHTML = postElements
+        document.getElementById('openDados').innerHTML = postElements
+    }
+
+    if(Permission == 1){
+        let spanvalue2 = document.querySelector('.spanValue2')
+        
+
+        btncadastro.setAttribute('style', 'display:none')
+        btnlogin.setAttribute('style', 'display:none')
+
+    
+        let postElements = ''
+        let postElement = `<p class="IdName">${Name}➭</p>`
+    
+        postElements += postElement
+    
+
+
+        document.getElementById('openDados').innerHTML = postElements
+    }
+
+    if(Permission == 2){
+        
+
+        btncadastro.setAttribute('style', 'display:none')
+        btnlogin.setAttribute('style', 'display:none')
+
+    
+        let postElements = ''
+        let postElement = `<p class="IdName">${Name}➭</p>`
+    
+        postElements += postElement
+    
+
+
+        document.getElementById('openDados').innerHTML = postElements
+    }
+
+    if(Permission == 3){
+        
+
+        btncadastro.setAttribute('style', 'display:none')
+        btnlogin.setAttribute('style', 'display:none')
+
+    
+        let postElements = ''
+        let postElement = `<p class="IdName">${Name}➭</p>`
+    
+        postElements += postElement
+    
+
+
+        document.getElementById('openDados').innerHTML = postElements
+    }
+
+
 
 }
 pegaNomeEId()
@@ -45,6 +98,7 @@ const btnLogout = document.querySelector('.logout')
 const btncadastra_Carro = document.querySelector('#cadastroDeCarros')
 const btnmeuSaldo = document.querySelector('#meuSaldo')
 const btnMeusVeiculos = document.querySelector('#meusVeiculos')
+
 
 if(openDados){
     openDados.addEventListener('click', () => {
@@ -76,7 +130,9 @@ if(btncadastra_Carro){
 }
 
 if(btnmeuSaldo){
-    btnmeuSaldo.addEventListener('click', () => {
+    btnmeuSaldo.addEventListener('click', (e) => {
+        e.preventDefault()
+
         const cardMeuSaldoValidacao = document.getElementById('cardMeuSaldo').style.display
         const cardMeuSaldo = document.querySelector('#cardMeuSaldo')
 
@@ -89,6 +145,30 @@ if(btnmeuSaldo){
             cardMeuSaldo.style.display = "flex"
         
         }
+
+        let identidadeUser = JSON.parse(localStorage.getItem('_DadosUser2') || '{}')
+        let usuarioid = identidadeUser.dados.UserId
+
+        fetch('http://localhost:1323/car/carsCanCreate', {
+            method: 'POST',
+            headers: {'Content-type': 'application/json'},
+            body: JSON.stringify({
+                userId: usuarioid,
+            })
+        }).then((res) => {
+            
+            return res.json()
+        }).then(data => {
+            let valor = "Voce tem: " + data + " carros cadastrado"
+            console.log(valor)
+
+            
+            let postElements = ''
+            postElements += valor
+
+            document.getElementById('value_saldo').textContent = postElements
+           
+        })
     })
 }
 

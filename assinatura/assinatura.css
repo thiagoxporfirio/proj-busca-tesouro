@@ -16,7 +16,10 @@ strong{
     margin: 0;
     padding: 0;
 }
-
+#value_saldo{
+  color: #10c95dea;
+  margin-top: 15px;
+}
 .IdName{
   color: white;
   margin: 0;

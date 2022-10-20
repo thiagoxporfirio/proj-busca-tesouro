@@ -8,6 +8,17 @@
     <title>Game over, voce achou</title>
 </head>
 <body>
+
+    <div id="successhandle" class="content-box">
+        <div class="container-box">
+            <div class="card-group">
+                <img src="../assets/sucesso.png" alt="sucessoimg">
+                <h2 class="h2-group">Email enviado!</h2>
+            </div>
+            <span class="span-group">Aguarde entraremos em contato caso as informacoes forem validadas.</span>
+            <button class="btn-group">Voltar ao iniciar</button>
+        </div>
+    </div>
     <div class="box">
         
         <div class="form-box">
@@ -28,7 +39,12 @@
 
                         <div class="input-group">
                             <label id="LabelPlaca" for="Placa"> Placa</label>
-                            <input type="text" id="Placa" placeholder="Placa do veiculo encontrado" required>
+                            <input type="text" id="Placa" placeholder="Placa do veiculo encontrado" maxlength="7" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label id="LabelEmail" for="Placa"> Email</label>
+                            <input type="text" id="email" placeholder="Seu email do site" maxlength="" required>
                         </div>
 
                         <div class="input-group">
@@ -38,7 +54,7 @@
 
                         <div class="input-group">
                             <label for="estado" id="LabelEstado">Estado</label>
-                            <input type="text" id="Estado" placeholder="Ex: SP" name="" required>
+                            <input type="text" id="Estado" placeholder="Ex: SP" name="" maxlength="2" required>
                         </div>
 
                         <div class="input-group">
@@ -47,8 +63,8 @@
                         </div>
 
                         <div class="input-group">
-                            <label for="fotos" id="LabelFotos">Minimo 04 fotos do carro (Frente e Traz)</label>
-                            <input type="file" id="filename" name="arquivos" class="putImg" accept="image/png, image/jpeg"  multiple />
+                            <label for="fotos" id="LabelFotos">Minimo 03 fotos do carro (Frente e Traz)</label>
+                            <input type="file" id="filename" name="arquivos" class="putImg" accept="image/png, image/jpeg" onchange="converterImagem()" multiple />
                         </div>
 
                         <div class="input-group">
@@ -57,7 +73,7 @@
                         </div>
 
                         <div class="input-group">
-                            <button class="submitButton" type="submit">CADASTRAR</button>
+                            <button class="submitButton" type="submit">Enviar Email</button>
                         </div>
                     </form>
                 </div>

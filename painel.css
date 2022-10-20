@@ -150,5 +150,11 @@
     flex-direction: column;
     box-shadow: 2px 20px 25px #5f5f5d5d;
     margin-left: 10%;
-    padding: 20px;
+    padding: 5px 5px 5px;
+}
+
+.fechaCardCarros{
+    width: 22px;
+    margin-bottom: 20px;
+    cursor: pointer;
 }

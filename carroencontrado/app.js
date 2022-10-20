@@ -5,19 +5,20 @@ let inputEstado = document.querySelector('#Estado')
 let inputMunicipio = document.querySelector('#Municipio')
 let inputFotos = document.querySelector('.putImg')
 let inputDescricao = document.querySelector('#TextDescricao')
+let inputEmail = document.querySelector('#email')
 
 let btnEnviar = document.querySelector('.submitButton')
 
 
-function Checkfiles(){
+function Checkfiles() {
     let fup = document.getElementById('filename');
     let fileName = fup.value;
     let ext = fileName.substring(fileName.lastIndexOf('.') + 1);
 
-    if(ext =="jpeg" || ext=="png"){
+    if (ext == "jpeg" || ext == "png") {
         return true;
     }
-    else{
+    else {
         return false;
     }
 }
@@ -29,8 +30,11 @@ const successHandler = () => {
     btnEnviar.textContent = "Sucesso! :)";
 
     setTimeout(() => {
-        
-    })
+        let cardsuccess = document.querySelector('.content-box')
+        cardsuccess.setAttribute('style', 'displa:flex')
+
+        return validateCardHandle()
+    }, 1000)
 }
 
 const errorHandler = () => {
@@ -38,15 +42,25 @@ const errorHandler = () => {
     btnEnviar.classList.remove('success');
     btnEnviar.classList.add('error');
     btnEnviar.textContent = "Nada encontrado :(";
+
+}
+
+const validateCardHandle = () => {
+    let cardsuccess = document.querySelector('.content-box')
+    let cardflex = cardsuccess.style.display = 'flex'
+
+    if (cardflex) {
+        btnEnviar.setAttribute("disabled", "disabled")
+    }
 }
 
 const validateInputNome = (event) => {
     const input = event.currentTarget;
 
-    if(input.value.length <= 10) {
+    if (input.value.length <= 10) {
         btnEnviar.setAttribute("disabled", "disabled");
         input.setAttribute('style', 'box-shadow: 0 2px 2px rgba(248, 5, 5, 0.5)')
-        
+
     } else {
         btnEnviar.removeAttribute("disabled");
         input.setAttribute('style', 'box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5)')
@@ -56,7 +70,7 @@ const validateInputNome = (event) => {
 const validateInputPlaca = (event) => {
     const input = event.currentTarget;
 
-    if(input.value.length <= 6) {
+    if (input.value.length <= 6) {
         btnEnviar.setAttribute("disabled", "disabled");
         input.setAttribute('style', 'box-shadow: 0 2px 2px rgba(248, 5, 5, 0.5)')
     } else {
@@ -68,7 +82,7 @@ const validateInputPlaca = (event) => {
 const validateInputMarca = (event) => {
     const input = event.currentTarget;
 
-    if(input.value.length <= 8) {
+    if (input.value.length <= 8) {
         btnEnviar.setAttribute("disabled", "disabled");
         input.setAttribute('style', 'box-shadow: 0 2px 2px rgba(248, 5, 5, 0.5)')
     } else {
@@ -80,7 +94,7 @@ const validateInputMarca = (event) => {
 const validateInputEstado = (event) => {
     const input = event.currentTarget;
 
-    if(input.value.length <= 1) {
+    if (input.value.length <= 1) {
         btnEnviar.setAttribute("disabled", "disabled");
         input.setAttribute('style', 'box-shadow: 0 2px 2px rgba(248, 5, 5, 0.5)')
     } else {
@@ -92,7 +106,7 @@ const validateInputEstado = (event) => {
 const validateInputMunicipio = (event) => {
     const input = event.currentTarget;
 
-    if(input.value.length <= 4) {
+    if (input.value.length <= 4) {
         btnEnviar.setAttribute("disabled", "disabled");
         input.setAttribute('style', 'box-shadow: 0 2px 2px rgba(248, 5, 5, 0.5)')
     } else {
@@ -104,7 +118,22 @@ const validateInputMunicipio = (event) => {
 const validateInputFotos = (event) => {
     const input = event.currentTarget;
 
-    if(input.value.length <= 3) {
+    if (input.value.length <= 2) {
+         Checkfiles()
+        btnEnviar.setAttribute("disabled", "disabled");
+        input.setAttribute('style', 'box-shadow: 0 2px 2px rgba(248, 5, 5, 0.5)')
+    } else {
+        btnEnviar.removeAttribute("disabled");
+        input.setAttribute('style', 'box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5)')
+    }
+
+    
+}
+
+const validateInputDescricao = (event) => {
+    const input = event.currentTarget;
+
+    if (input.value.length <= 50) {
         btnEnviar.setAttribute("disabled", "disabled");
         input.setAttribute('style', 'box-shadow: 0 2px 2px rgba(248, 5, 5, 0.5)')
     } else {
@@ -113,15 +142,17 @@ const validateInputFotos = (event) => {
     }
 }
 
-const validateInputDescricao = (event) => {
+const validateEmail = (event) => {
     const input = event.currentTarget;
+    const regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+    const emailTest = regex.test(input.value);
 
-    if(input.value.length <= 50) {
+    if (!emailTest) {
         btnEnviar.setAttribute("disabled", "disabled");
-        input.setAttribute('style', 'box-shadow: 0 2px 2px rgba(248, 5, 5, 0.5)')
+        input.classList.add('error');
     } else {
         btnEnviar.removeAttribute("disabled");
-        input.setAttribute('style', 'box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5)')
+        input.classList.remove('error');
     }
 }
 
@@ -131,24 +162,88 @@ inputPlaca.addEventListener('input', validateInputPlaca)
 inputMarcaeModelo.addEventListener('input', validateInputMarca)
 inputEstado.addEventListener('input', validateInputEstado)
 inputMunicipio.addEventListener('input', validateInputMunicipio)
-inputFotos.addEventListener('textarea', validateInputFotos)
+// inputFotos.addEventListener('textarea', validateInputFotos)
 inputDescricao.addEventListener('input', validateInputDescricao)
+inputEmail.addEventListener('input', validateEmail);
+
+let btnvoltarMenu = document.querySelector('.btn-group')
+if (btnvoltarMenu) {
+    btnvoltarMenu.addEventListener('click', () => {
+        window.location.href = 'projBuscaTesouro/index.html'
+    })
+}
 
 
-if(btnEnviar){
+
+
+
+
+async function converterImagem() {
+    const receberArquivo = document.getElementById("filename").files;
+    console.log(receberArquivo)
+
+    const dadosImagem = [];
+
+    for (let arquivo of receberArquivo) {
+        let reader = new FileReader();
+
+        reader.readAsDataURL(arquivo);
+        reader.onload = function () {
+           
+            dadosImagem.unshift(reader.result);
+            localStorage.setItem('imagensCarregadas',JSON.stringify(dadosImagem))
+        };
+        reader.onerror = function (error) {
+            console.log('Error: ', error);
+        };
+    }
+} 
+
+
+if (btnEnviar) {
     btnEnviar.addEventListener('click', (e) => {
         e.preventDefault()
         btnEnviar.textContent = "Enviando dados..."
+        console.log('get imagens', JSON.parse(localStorage.getItem('imagensCarregadas')))
+
+        let imagens = JSON.parse(localStorage.getItem('imagensCarregadas'))
+        
+        // let arrayProdutos = []
+        // let descricao = {
+        //     Placa: inputPlaca.value,
+        //     Marca: inputMarcaeModelo.value,
+        //     Estado: inputEstado.value,
+        //     Municipio: inputMunicipio.value
+        // }
+
+        // JSON.stringify(descricao)
+        //arrayProdutos.push(descricao)
+
+        let formdados = {
+            nome: inputNomeCompleto.value,
+            email: inputEmail.value,
+            localizacao: inputDescricao.value,
+            placa: inputPlaca.value,
+            marca: inputMarcaeModelo.value,
+            municipio: inputMunicipio.value,
+            estado: inputEstado.value,
+            foto2: imagens[0],
+            foto3: imagens[1],
+            foto1: imagens[2],
+        }
+        console.log(formdados)
 
         setTimeout(() => {
-            fetch('', {
+            fetch('http://localhost:1323/sendInformation', {
                 method: 'POST',
                 headers: {'Content-type': 'application/json'},
-                body: JSON.stringify({})
+                body: JSON.stringify(formdados)
+
             }).then((res) => {
-                if(res.status !== 200){
+                if (res.status !== 200) {
                     return errorHandler()
-                }else{
+                } else {
+                    localStorage.removeItem('imagemCarregada');
                     successHandler()
                 }
             }).catch((error) => {

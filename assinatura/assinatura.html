@@ -33,20 +33,37 @@
         </nav>
       </header>
 <section>
-                  <!-- Painel Card -->
-                  <div class="containerCard">
-                    <div class="card">
-                        <button class="btnsair" href="#"><img src="../assets/x-square.svg" alt="cardcadastro" class="iconcard">Fechar</button>
-                        
-                        <div class="content">
-                            <div class="iconscard">
-                                <button class="cadastracarro">
-                                    <img src="../assets/card-text.svg" alt="cardcadastro" class="iconcard"> Cadastrar carros</button>
-                            </div>
-                            <button class="logout">Sair</button>
-                        </div>
+         <!-- Painel Card -->
+         <div class="containerCard">
+            <div class="card">
+                <button class="btnsair" href="#"><img src="../assets/x-square.svg" alt="cardcadastro" class="iconcard">Fechar</button>
+                
+                <div class="content">
+                    <div class="iconscard">
+                        <button class="cadastracarro" id="cadastroDeCarros" >
+                            <img src="../assets/card-text.svg" alt="cardcadastro" class="iconcard"> Cadastrar carros
+                        </button>
+                        <button class="cadastracarro" id="meuSaldo">
+                            <img src="../assets/currency-dollar.svg" alt="cardmeusaldo" class="iconscardv2"> Meu saldo
+                        </button>
+                        <button class="cadastracarro" id="meusVeiculos">
+                            <img src="../assets/truck-front.svg" alt="cardmeus" class="iconscardv2"> Meus veiculos
+                        </button>
                     </div>
+                    <button class="logout">Sair</button>
                 </div>
+            </div>
+        </div>
+        <div id="cardMeuSaldo">
+            
+            <div class="card_meusaldo">
+                <img src="../assets/x-square.svg" alt="cardcadastro" class="fechaCardCarros">
+                <h3>Carros cadastrado</h3>
+                <div class="valuescarros">
+                    <span id="value_saldo"></span><span class="spanValue2"></span>
+                </div>
+            </div>    
+        </div>
     <div class="box-planos">
     <div id="como" class="containerPacote" style="margin-top: 50px;">
         <h3 class="planoVeicular">
@@ -66,7 +83,7 @@
         </h3>
         <p class="p-info">Quer achar seu veiculo perdido ou roubado?</p>
         <p class="preco">
-            <s>de R$ 200,00 por</s>
+            <s>de R$ 299,00 por</s>
             <b>R$ 179,90</b>
             <span><button type="button" id="btn-1" class="userid2"><a><strong>QUERO ESSE</strong></a></button></span>
             <span>Cadastre ate 10 carros</span>
@@ -78,8 +95,8 @@
         </h3>
         <p class="p-info">Quer achar seu veiculo perdido ou roubado?</p>
         <p class="preco">
-            <s>de R$ 400,00 por</s>
-            <b>R$ 399,90</b>
+            <s>de R$ 1.495,00 por</s>
+            <b>R$ 599,90</b>
             <span><button type="button" id="btn-1"><a class="userid3"><strong>QUERO ESSE</strong></a></button></span>
             <span>Cadastre uma quantidade Ilimitada</span>
         </p>
@@ -122,5 +139,6 @@
     <script src="./appassinatura.js"></script>
     <script src="./btn2plano.js"></script>
     <script src="./btn3plano.js"></script>
+    <script src="../buscar-home.js"></script>
 </body>
 </html>

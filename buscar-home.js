@@ -8,15 +8,8 @@ const init = () => {
     const inputPlaca = document.querySelector('.input1')
 
     const btnFechar = document.querySelector('#fechar')
-    const btnSucesso = document.querySelector('#btn-sucesso')
     const divGameOver = document.querySelector('#gameover')
-
-    if(btnSucesso){
-        btnSucesso.addEventListener('click', () => {
-            window.location.href = ''
-        })
-    }
-
+    
     if(btnFechar){
         btnFechar.addEventListener('click', () => {
             divGameOver.setAttribute('style', 'display:none')
@@ -77,10 +70,18 @@ const init = () => {
     let btn_gameover = document.querySelector('#btn-sucesso')
     if(btn_gameover){
         btn_gameover.addEventListener('click', () => {
-            window.location.href = ''
+            window.location.href = '/carroencontrado/sucesso.html'
         })
     }
 
+    let btn_fechaCardCarros = document.querySelector('.fechaCardCarros')
+    if(btn_fechaCardCarros){
+        btn_fechaCardCarros.addEventListener('click', () => {
+            let cardMeuSaldo = document.querySelector('#cardMeuSaldo')
+
+            cardMeuSaldo.setAttribute('style', 'display:none')
+        })
+    }
 
 
 

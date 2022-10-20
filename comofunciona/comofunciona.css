@@ -16,6 +16,13 @@ body{
     height: 100vh;
 }
 
+#value_saldo{
+  color: #10c95dea;
+  margin-top: 15px;
+  font-size: 16px;
+  font-family: 'Kdam Thmor Pro', sans-serif;
+}
+
 .IdName{
   color: white;
   margin: 0;

@@ -64,15 +64,9 @@ h3{
 }
 
 .btnCarros:hover{
-    background-color:#1c63aa;
+    background: #0033a0;
     transform: scale(1.01);
     color: white;
-}
-
-.content_fetch{
-    width: 100%;
-    height: 100%;
-    display: flex;
 }
 
 .btnCarros.success {
@@ -81,4 +75,99 @@ h3{
   
   .btnCarros.error {
     background: var(--input-error);
+  }
+
+  #posts{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  
+h1{
+    color: #ffb400;
+    text-align: center;
+    font-size: 2.25rem;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+  }
+  
+  h2, h3{
+    text-align: center;
+      font-family: 'Noto Sans', sans-serif;
+      font-size: 1.25rem;
+      color: #2a2a2a;
+  }
+  
+  span{
+      font-family: 'Noto Sans', sans-serif;
+      font-size: 1rem;
+      color: #ca0505;
+  }
+
+  
+.card{
+    width:95%;
+    height: 30%;
+    margin: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 1px solid rgba(90, 88, 88, 0.473);
+    border-radius: 6px;
+    margin-bottom: 20px;
+  }
+  
+  .card-header{
+    width: 100%;
+    height: 15%;
+    background-color: #eeececce;
+    border-bottom: 1px solid rgba(90, 88, 88, 0.473);
+    border-radius: 6px;
+  }
+  
+  .card-body{
+    padding-left: 10px;
+  }
+  
+  .dadoscard{
+    margin-top: 7px;
+    margin-bottom: 7px;
+    margin-right: 5px;
+    border-radius: 5px;
+    border:1px solid rgba(90, 88, 88, 0.473);
+    padding-left: 5px;
+  }
+  
+  p{
+    font-family: 'Noto Sans', sans-serif;
+    color: #2a2a2a;
+    font-weight: bolder;
+  
+  }
+  
+  select{
+    border-radius: 5px;
+    border: 2px solid grey;
+    font-family: 'Noto Sans', sans-serif;
+  }
+
+  
+  /* @media (max-width: 999px){
+    .card{
+       margin-left: -80%;
+    }
+  } */
+  
+  
+  @media (max-width:380px) {
+    section form{
+      display: flex;
+      flex-direction: column;
+      margin-top: 15px;
+      
+    }
+  
+    .input-box{
+      margin-top: 15px;
+    }
   }

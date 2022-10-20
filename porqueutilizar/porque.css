@@ -21,6 +21,12 @@ html{
   font-family: 'Kdam Thmor Pro', sans-serif;
   font-weight: lighter;
 }
+#value_saldo{
+  color: #10c95dea;
+  margin-top: 15px;
+  font-size: 16px;
+  font-family: 'Kdam Thmor Pro', sans-serif;
+}
 
 .IdName:hover{
   color: #ffb400;
