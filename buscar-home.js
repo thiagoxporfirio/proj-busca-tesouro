@@ -1,7 +1,5 @@
 
 const init = () => {
-    let identidadeUser = JSON.parse(localStorage.getItem('_DadosUser2') || '{}')
-    let usuarioid = identidadeUser.dados.UserId
 
     const btnSubmit_Buscar = document.querySelector('#btnSubmit')
     const inputPlaca = document.querySelector('.input1')
@@ -64,8 +62,12 @@ const init = () => {
     if(btnSubmit_Buscar){
         btnSubmit_Buscar.addEventListener('click', (e) => {
             e.preventDefault()
+            console.log("clicou")
 
             btnSubmit_Buscar.textContent = "Buscando..."
+
+            let identidadeUser = JSON.parse(localStorage.getItem('_DadosUser2') || '{}')
+            let usuarioid = identidadeUser.dados.UserId
 
             setTimeout(() => {
                 
