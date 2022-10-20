@@ -57,9 +57,7 @@ const init = () => {
         btnSubmit_Buscar.textContent = "Nada encontrado :(";
     }
 
-    let identidadeUser = JSON.parse(localStorage.getItem('_DadosUser2') || '{}')
-    let usuarioid = identidadeUser.dados.UserId
-    
+
     if(btnSubmit_Buscar){
         btnSubmit_Buscar.addEventListener('click', (e) => {
             e.preventDefault()
@@ -80,8 +78,10 @@ const init = () => {
 
                     }
                     if(typeof usuarioid === "undefined"){
+                        let identidadeUser = JSON.parse(localStorage.getItem('_DadosUser2') || '{}')
+                        let usuarioid = identidadeUser.dados.UserId
 
-                        successFound()
+                        return successFound()
                     }else{
                         successHandler()
 
