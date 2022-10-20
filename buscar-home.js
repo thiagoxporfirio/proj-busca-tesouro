@@ -29,6 +29,10 @@ const init = () => {
     }
 
     const successFound = () => {
+
+        let identidadeUser = JSON.parse(localStorage.getItem('_DadosUser2') || '{}')
+        let usuarioid = identidadeUser.dados.UserId
+
         btnSubmit_Buscar.classList.remove('loading');
         btnSubmit_Buscar.classList.remove('error');
         btnSubmit_Buscar.classList.add('success');
@@ -78,9 +82,6 @@ const init = () => {
 
                     }
                     if(typeof usuarioid === "undefined"){
-                        let identidadeUser = JSON.parse(localStorage.getItem('_DadosUser2') || '{}')
-                        let usuarioid = identidadeUser.dados.UserId
-
                         return successFound()
                     }else{
                         successHandler()
