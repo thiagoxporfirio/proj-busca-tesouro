@@ -156,7 +156,10 @@ if(btnmeuSaldo){
             let valor = "Voce tem: " + data + " carros cadastrado"
             console.log(valor)
 
-            
+            if(valor = "-1"){
+                valor.textContent = "Voce tem plano Ilimitado"
+            }
+
             let postElements = ''
             postElements += valor
 
