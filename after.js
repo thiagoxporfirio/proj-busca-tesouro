@@ -149,7 +149,7 @@ if(btnmeuSaldo){
         let identidadeUser = JSON.parse(localStorage.getItem('_DadosUser2') || '{}')
         let usuarioid = identidadeUser.dados.UserId
 
-        fetch('http://localhost:1323/car/carsCanCreate', {
+        fetch('https://dry-chamber-14632.herokuapp.com/car/carsCanCreate', {
             method: 'POST',
             headers: {'Content-type': 'application/json'},
             body: JSON.stringify({

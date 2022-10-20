@@ -38,7 +38,7 @@ if(btnVerCarros){
 
         setTimeout(() => {
 
-            fetch('http://localhost:1323/car/cars', {
+            fetch('https://dry-chamber-14632.herokuapp.com/car/cars', {
                     method: 'POST',
                     headers: {'Content-type': 'application/json'},
                     body: JSON.stringify(dados)

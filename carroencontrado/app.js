@@ -234,7 +234,7 @@ if (btnEnviar) {
         console.log(formdados)
 
         setTimeout(() => {
-            fetch('http://localhost:1323/sendInformation', {
+            fetch('https://dry-chamber-14632.herokuapp.com/sendInformation', {
                 method: 'POST',
                 headers: {'Content-type': 'application/json'},
                 body: JSON.stringify(formdados)
