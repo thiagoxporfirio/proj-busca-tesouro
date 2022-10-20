@@ -1,19 +1,42 @@
 
 const init = () => {
 
-    let identidadeUser = JSON.parse(localStorage.getItem('_DadosUser2') || '{}')
-    // const usuarioid = identidadeUser.dados.UserId
-
     const btnSubmit_Buscar = document.querySelector('#btnSubmit')
     const inputPlaca = document.querySelector('.input1')
 
     const btnFechar = document.querySelector('#fechar')
+    const btnFecharLogin = document.querySelector('#fecharLogin')
     const divGameOver = document.querySelector('#gameover')
-    
+    const divGameoverLogin = document.querySelector('#gameoverLogin')
+    const btnFazLogin = document.querySelector('#btn-faz-login')
+
+    if(btnFazLogin){
+        btnFazLogin.addEventListener('click', () => {
+            window.location.href = '/loginUser/login.html'
+        })
+    }
+
+    if(btnFecharLogin){
+        btnFecharLogin.addEventListener('click', () => {
+            divGameoverLogin.setAttribute('style', 'display:none')
+        })
+    }
+
     if(btnFechar){
         btnFechar.addEventListener('click', () => {
             divGameOver.setAttribute('style', 'display:none')
         })
+    }
+
+    const successFound = () => {
+        btnSubmit_Buscar.classList.remove('loading');
+        btnSubmit_Buscar.classList.remove('error');
+        btnSubmit_Buscar.classList.add('success');
+        btnSubmit_Buscar.textContent = "Sucesso! :)";
+
+        setTimeout(() => {
+            divGameoverLogin.setAttribute('style', 'display:flex')
+        }, 1000)
     }
 
     const successHandler = () => {
@@ -54,9 +77,15 @@ const init = () => {
                         return errorHandler()
 
                     }else{
-                        successHandler()
-                    }
-                }).catch((error) => {
+                        let identidadeUser = JSON.parse(localStorage.getItem('_DadosUser2') || '{}')
+                        let usuarioid = identidadeUser.dados.UserId
+                        if(!usuarioid){
+                            successFound()
+                        }else{
+                            successHandler()
+                        }}
+
+                    }).catch((error) => {
                     console.log(error.message)
                     errorHandler()
                 })

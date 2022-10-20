@@ -84,6 +84,52 @@
     color: white;
 }
 
+#gameoverLogin{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.87);
+    color: white;
+    font-size: 40px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 99;
+}
+
+#fecharLogin{
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bolder;
+    color: white;
+    background-color:rgba(0, 0, 0, 0);
+    border: 1px solid white;
+    border-radius: 80px;
+    cursor: pointer;
+}
+
+#fecharLogin:hover{
+    color: #ffb400;
+    transition: all 0.4s ease;
+}
+
+#btn-faz-login{
+    background: #ffb400;
+    padding: 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+#btn-faz-login:hover{
+    background-color:#1c63aa;
+    transform: scale(1.08);
+    color: white;
+}
 
 
 
