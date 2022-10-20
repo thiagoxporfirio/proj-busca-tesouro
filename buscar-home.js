@@ -1,5 +1,5 @@
 
-const init = () => {
+
     let identidadeUser = JSON.parse(localStorage.getItem('_DadosUser2') || '{}')
     let usuarioid = identidadeUser.dados.UserId
 
@@ -113,26 +113,3 @@ const init = () => {
         })
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
-
-
-window.onload = init
