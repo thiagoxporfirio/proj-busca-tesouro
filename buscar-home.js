@@ -57,7 +57,9 @@ const init = () => {
         btnSubmit_Buscar.textContent = "Nada encontrado :(";
     }
 
-
+    let identidadeUser = JSON.parse(localStorage.getItem('_DadosUser2') || '{}')
+    let usuarioid = identidadeUser.dados.UserId
+    
     if(btnSubmit_Buscar){
         btnSubmit_Buscar.addEventListener('click', (e) => {
             e.preventDefault()
@@ -76,17 +78,16 @@ const init = () => {
                     if(response.status !== 200){
                         return errorHandler()
 
-                    }else{
-                        let identidadeUser = JSON.parse(localStorage.getItem('_DadosUser2') || '{}')
-                        let usuarioid = identidadeUser.dados.UserId
-                        
-                        if(typeof usuarioid === "undefined"){
-                            successFound()
-                        }else{
-                            successHandler()
+                    }
+                    if(typeof usuarioid === "undefined"){
 
-                        }}}).catch((error) => {
-                    //console.log(error.message)
+                        successFound()
+                    }else{
+                        successHandler()
+
+                    }    
+                    }).catch((error) => {
+                    console.log(error.message)
                     errorHandler()
                 })
             
