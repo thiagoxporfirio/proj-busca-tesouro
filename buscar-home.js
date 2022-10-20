@@ -79,6 +79,7 @@ const init = () => {
                     }else{
                         let identidadeUser = JSON.parse(localStorage.getItem('_DadosUser2') || '{}')
                         let usuarioid = identidadeUser.dados.UserId
+                        
                         if(!usuarioid){
                             successFound()
                         }else{

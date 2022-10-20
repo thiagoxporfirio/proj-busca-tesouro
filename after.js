@@ -1,5 +1,5 @@
 
-const pegaNomeEId = () => {
+
     const btnlogin = document.querySelector('.btn')
     const btncadastro = document.querySelector('.btn2')
     const header1 = document.querySelector('#header1')
@@ -85,10 +85,6 @@ const pegaNomeEId = () => {
         document.getElementById('openDados').innerHTML = postElements
     }
 
-
-
-}
-pegaNomeEId()
 
 const openDados = document.querySelector('#openDados')
 const btnSair = document.querySelector('.btnsair')
