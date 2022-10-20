@@ -155,7 +155,7 @@ const init = () => {
         submit_Button.textContent = "Sucesso! :)";
 
         setTimeout(()=>{
-            window.location.href = '../carros/carros_procurados.html'
+            window.location.href = '../carrosuser/seucarro.html'
         }, 2000)
     }
 
