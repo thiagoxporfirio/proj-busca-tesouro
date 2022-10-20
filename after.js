@@ -5,8 +5,8 @@ const pegaNomeEId = () => {
     const header1 = document.querySelector('#header1')
 
 
-    let identidadeUser = JSON.parse(localStorage.getItem('_DadosUser2') || '{}')
-    const usuarioid = identidadeUser.dados.UserId
+    // let identidadeUser = JSON.parse(localStorage.getItem('_DadosUser2') || '{}')
+    // const usuarioid = identidadeUser.dados.UserId
     const Name = identidadeUser.dados.Name
     const Permission = identidadeUser.dados.Permission
 
