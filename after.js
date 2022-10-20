@@ -154,15 +154,16 @@ if(btnmeuSaldo){
             return res.json()
         }).then(data => {
             console.log(data)
-            let valor = "Voce tem: " + data + " carros cadastrado"
-            console.log(valor)
-
+            
             if(data = "-1"){
-                valor.textContent = "Voce tem plano Ilimitado"
+                data.textContent = "Voce tem plano Ilimitado"
+            }else{
+                let valor = "Voce tem: " + data + " carros cadastrado"
+                console.log(valor)
             }
 
             let postElements = ''
-            postElements += valor
+            postElements += valor || data
 
             document.getElementById('value_saldo').textContent = postElements
            
