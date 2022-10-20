@@ -84,10 +84,9 @@ const init = () => {
                             successFound()
                         }else{
                             successHandler()
-                        }}
 
-                    }).catch((error) => {
-                    console.log(error.message)
+                        }}}).catch((error) => {
+                    //console.log(error.message)
                     errorHandler()
                 })
             
