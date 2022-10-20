@@ -1,6 +1,5 @@
    
-let identidadeUser = JSON.parse(localStorage.getItem('_DadosUser') || '{}')
-let usuarioid = identidadeUser.dados
+let usuarioid = identidadeUser.dados.UserId
 console.log(usuarioid)
 
 let btnUserid = document.querySelector('.userid')
