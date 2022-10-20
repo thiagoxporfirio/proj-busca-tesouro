@@ -153,6 +153,7 @@ if(btnmeuSaldo){
             
             return res.json()
         }).then(data => {
+            console.log(data)
             let valor = "Voce tem: " + data + " carros cadastrado"
             console.log(valor)
 
