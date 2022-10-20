@@ -80,7 +80,7 @@ const init = () => {
                         let identidadeUser = JSON.parse(localStorage.getItem('_DadosUser2') || '{}')
                         let usuarioid = identidadeUser.dados.UserId
                         
-                        if(!usuarioid){
+                        if(typeof usuarioid === "undefined"){
                             successFound()
                         }else{
                             successHandler()
