@@ -169,7 +169,7 @@ inputEmail.addEventListener('input', validateEmail);
 let btnvoltarMenu = document.querySelector('.btn-group')
 if (btnvoltarMenu) {
     btnvoltarMenu.addEventListener('click', () => {
-        window.location.href = 'projBuscaTesouro/index.html'
+        window.location.href = '/index.html'
     })
 }
 
