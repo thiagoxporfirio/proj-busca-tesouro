@@ -163,8 +163,8 @@ if(btnmeuSaldo){
             }
 
             let postElements = ''
-            postElements += valor || data
-
+            postElements += valor
+            
             document.getElementById('value_saldo').textContent = postElements
            
         })
