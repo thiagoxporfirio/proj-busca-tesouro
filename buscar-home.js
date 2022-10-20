@@ -1,5 +1,5 @@
 
-
+const init = () => {
     let identidadeUser = JSON.parse(localStorage.getItem('_DadosUser2') || '{}')
     let usuarioid = identidadeUser.dados.UserId
 
@@ -80,11 +80,12 @@
                         return errorHandler()
 
                     }
-                    if(typeof usuarioid === "undefined"){
-                        return successFound()
-                    }else{
-                        successHandler()
-
+                    if(response.status == 200){
+                        if(typeof usuarioid === "undefined"){
+                            successFound()
+                        }else{
+                            successHandler()
+                        }
                     }    
                     }).catch((error) => {
                     console.log(error.message)
@@ -113,3 +114,26 @@
         })
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+window.onload = init
