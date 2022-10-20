@@ -1,6 +1,6 @@
-let identidadeUser = JSON.parse(localStorage.getItem('_DadosUser2') || '{}')
-    const usuarioid = identidadeUser.dados.UserId
-        console.log(usuarioid)
+    let identidadeUser = JSON.parse(localStorage.getItem('_DadosUser2') || '{}')
+    let usuarioid = identidadeUser.dados.UserId
+    console.log(usuarioid)
 
 
 
