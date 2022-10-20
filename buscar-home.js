@@ -81,18 +81,18 @@ const init = () => {
                     }
                     if(response.status == 200){
                         let identidadeUser = JSON.parse(localStorage.getItem('_DadosUser2') || '{}')
-                        let usuarioid = identidadeUser.dados.UserId
+                        let usuarioid = identidadeUser?.dados?.UserId
 
                         if(typeof usuarioid === "undefined"){
-                            successFound()
+                            return successFound()
                         }else{
                             successHandler()
                         }
                     }    
                     }).catch((error) => {
-                    console.log(error.message)
-                    errorHandler()
-                })
+                        console.log(error.message)
+                        errorHandler()
+                    })
             
             
             
