@@ -12,12 +12,19 @@ body {
     min-height: 100vh;
 }
 
+.logosite{
+    width: 250px;
+    display: block;
+    margin-bottom: 100px;
+}
+
 .container {
     width: 1150px;
     padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     flex-wrap: wrap;
 }
 
@@ -55,7 +62,7 @@ body {
 .container .card .content a {
     position: relative;
     display: inline-block;
-    padding: 10px 20px;
+    padding: 20px 20px;
     background-color: #000;
     color: #fff;
     border-radius: 7px;

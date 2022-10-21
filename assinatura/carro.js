@@ -43,7 +43,7 @@ const init = () => {
     const validateInputRenavam = (event) => {
         const input = event.currentTarget;
 
-        if(input.value.length <= 8) {
+        if(input.value.length <= 10) {
             submit_Button.setAttribute("disabled", "disabled");
             input.setAttribute('style', 'box-shadow: 0 2px 2px rgba(248, 5, 5, 0.5)')
         } else {
@@ -67,7 +67,7 @@ const init = () => {
     const validateInputChassi = (event) => {
         const input = event.currentTarget;
 
-        if(input.value.length <= 9) {
+        if(input.value.length <= 16) {
             submit_Button.setAttribute("disabled", "disabled");
             input.setAttribute('style', 'box-shadow: 0 2px 2px rgba(248, 5, 5, 0.5)')
         } else {

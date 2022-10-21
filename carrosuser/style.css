@@ -35,6 +35,7 @@ h3{
     cursor: pointer;
     width:90px;
     height: 80px;
+    border-radius: 10px;
 }
 #imgVoltar:hover{
 

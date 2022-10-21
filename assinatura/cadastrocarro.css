@@ -227,6 +227,7 @@ form .input-group input{
     padding: 15px;
     font-size: 15px;
     transition: all 0.4s ease;
+    text-transform:uppercase;
     outline: none;
 }
 
