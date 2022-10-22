@@ -16,6 +16,29 @@ strong{
     margin: 0;
     padding: 0;
 }
+.container-error-validate{
+  width: 100%;
+  display: none;
+  align-items: center;
+
+}
+
+.errorvalidate{
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: bold;
+  font-weight: 200;
+  border: none;
+  font-size: 17px;
+  color: black;
+  background-color: #e7141480;
+  justify-content: center;
+  text-align: center;
+  margin-top: 0;
+}
+
 #value_saldo{
   color: #10c95dea;
   margin-top: 15px;
