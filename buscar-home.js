@@ -121,7 +121,7 @@ const init = () => {
     let btn_gameover = document.querySelector('#btn-sucesso')
     if(btn_gameover){
         btn_gameover.addEventListener('click', () => {
-            window.location.href = '/projBuscaTesouro/carroencontrado/sucesso.html'
+            window.location.href = '/carroencontrado/sucesso.html'
         })
     }
 
