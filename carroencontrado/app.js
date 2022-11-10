@@ -6,9 +6,55 @@ let inputMunicipio = document.querySelector('#Municipio')
 let inputFotos = document.querySelector('.putImg')
 let inputDescricao = document.querySelector('#TextDescricao')
 let inputEmail = document.querySelector('#email')
+let divphoto = document.querySelector('#photo')
 
 let btnEnviar = document.querySelector('.submitButton')
 
+//Local storage data
+let identidadeUser = JSON.parse(localStorage.getItem('_DadosUser2') || '{}')
+let usuarioid = identidadeUser.dados.UserId
+let useremail = identidadeUser.dados.Email
+let username = identidadeUser.dados.Name
+
+
+let nameStorage = document.querySelector('#namelocalstorage')
+let emailStorage = document.querySelector("#emaillocalstorage")
+
+// Dados do carro manipulados pelo localstorage
+let dataCar = JSON.parse(localStorage.getItem('_DadosCar') || '{}')
+let marcaemodelo = dataCar.dados.MarcaEModelo
+let placadoCar = dataCar.dados.Placa
+let anodoCar = dataCar.dados.AnoDoCarro
+let cordoCar = dataCar.dados.Cor
+let estadodoCar = dataCar.dados.State
+let municipiodoCar = dataCar.dados.Municipio
+
+let marcaStorage = document.querySelector('#marcaemodelo')
+let placaStorage = document.querySelector('#placa')
+let anoStorage = document.querySelector('#ano')
+let corStorage = document.querySelector('#cor')
+
+//Manipulando dados da pagina
+nameStorage.textContent = `${username} `
+emailStorage.textContent = `${useremail} `
+marcaStorage.textContent = `${marcaemodelo}`
+placaStorage.textContent = `${placadoCar}`
+anoStorage.textContent = `${anodoCar}`
+corStorage.textContent = `${cordoCar}`
+
+
+let inputFile = document.querySelector("#filename");
+if(inputFile.files.length === 0){
+    localStorage.removeItem('imagensCarregadas')
+    
+    btnEnviar.setAttribute("disabled", "disabled");
+
+}else{
+    btnEnviar.removeAttribute("disabled");
+}
+
+
+const dadosImagem = [];
 
 function Checkfiles() {
     let fup = document.getElementById('filename');
@@ -32,7 +78,7 @@ const successHandler = () => {
     setTimeout(() => {
         let cardsuccess = document.querySelector('.content-box')
         cardsuccess.setAttribute('style', 'displa:flex')
-
+        
         return validateCardHandle()
     }, 1000)
 }
@@ -117,9 +163,9 @@ const validateInputMunicipio = (event) => {
 
 const validateInputFotos = (event) => {
     const input = event.currentTarget;
+    Checkfiles()
 
-    if (input.value.length <= 2) {
-         Checkfiles()
+    if (input.value.length <= 3) {
         btnEnviar.setAttribute("disabled", "disabled");
         input.setAttribute('style', 'box-shadow: 0 2px 2px rgba(248, 5, 5, 0.5)')
     } else {
@@ -127,7 +173,6 @@ const validateInputFotos = (event) => {
         input.setAttribute('style', 'box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5)')
     }
 
-    
 }
 
 const validateInputDescricao = (event) => {
@@ -156,15 +201,9 @@ const validateEmail = (event) => {
     }
 }
 
-
-inputNomeCompleto.addEventListener('input', validateInputNome)
-inputPlaca.addEventListener('input', validateInputPlaca)
-inputMarcaeModelo.addEventListener('input', validateInputMarca)
-inputEstado.addEventListener('input', validateInputEstado)
-inputMunicipio.addEventListener('input', validateInputMunicipio)
-// inputFotos.addEventListener('textarea', validateInputFotos)
+inputFotos.addEventListener('textarea', validateInputFotos)
 inputDescricao.addEventListener('input', validateInputDescricao)
-inputEmail.addEventListener('input', validateEmail);
+
 
 let btnvoltarMenu = document.querySelector('.btn-group')
 if (btnvoltarMenu) {
@@ -174,30 +213,44 @@ if (btnvoltarMenu) {
 }
 
 
+const pictureImage = document.querySelector(".imgphoto");
+const labelFotos = document.querySelector('#LabelFotos')
 
-
-
-
-async function converterImagem() {
-    const receberArquivo = document.getElementById("filename").files;
-    console.log(receberArquivo)
-
-    const dadosImagem = [];
-
-    for (let arquivo of receberArquivo) {
-        let reader = new FileReader();
-
-        reader.readAsDataURL(arquivo);
-        reader.onload = function () {
-           
-            dadosImagem.unshift(reader.result);
-            localStorage.setItem('imagensCarregadas',JSON.stringify(dadosImagem))
-        };
-        reader.onerror = function (error) {
-            console.log('Error: ', error);
-        };
+inputFile.addEventListener("change", function (e) {
+    const inputTarget = e.target;
+    for (const file of inputTarget.files) {
+        if (file) {
+            var readerTarget;
+            const reader = new FileReader();
+            labelFotos.setAttribute('style', 'display: block')
+            reader.addEventListener("load", function (e) {
+                readerTarget = e.target;
+    
+                const img = document.createElement("img");
+                img.src = readerTarget.result;
+                img.classList.add("picture__img");
+    
+                pictureImage.appendChild(img);
+    
+                reader.onerror = function (error) {
+                    console.log('Error: ', error);
+                };
+            });
+    
+            reader.readAsDataURL(file);
+            reader.onload = function () {
+                
+                dadosImagem.push(readerTarget.result)
+                //console.log(readerTarget.result)
+    
+                localStorage.setItem('imagensCarregadas', JSON.stringify(dadosImagem))
+            }
+        } else {
+    
+        }
+        
     }
-} 
+});
 
 
 if (btnEnviar) {
@@ -207,36 +260,28 @@ if (btnEnviar) {
         console.log('get imagens', JSON.parse(localStorage.getItem('imagensCarregadas')))
 
         let imagens = JSON.parse(localStorage.getItem('imagensCarregadas'))
+        console.log(imagens)
         
-        // let arrayProdutos = []
-        // let descricao = {
-        //     Placa: inputPlaca.value,
-        //     Marca: inputMarcaeModelo.value,
-        //     Estado: inputEstado.value,
-        //     Municipio: inputMunicipio.value
-        // }
-
-        // JSON.stringify(descricao)
-        //arrayProdutos.push(descricao)
-
+        
         let formdados = {
-            nome: inputNomeCompleto.value,
-            email: inputEmail.value,
+            nome: username,
+            email: useremail,
             localizacao: inputDescricao.value,
-            placa: inputPlaca.value,
-            marca: inputMarcaeModelo.value,
-            municipio: inputMunicipio.value,
-            estado: inputEstado.value,
+            placa: placadoCar,
+            marca: marcaemodelo,
+            municipio: municipiodoCar,
+            estado: estadodoCar,
             foto2: imagens[0],
             foto3: imagens[1],
             foto1: imagens[2],
+            foto4: imagens[3],
         }
         console.log(formdados)
 
         setTimeout(() => {
             fetch('https://dry-chamber-14632.herokuapp.com/sendInformation', {
                 method: 'POST',
-                headers: {'Content-type': 'application/json'},
+                headers: { 'Content-type': 'application/json' },
                 body: JSON.stringify(formdados)
 
             }).then((res) => {
@@ -252,6 +297,7 @@ if (btnEnviar) {
             })
 
         }, 1000)
+
     })
 }
 

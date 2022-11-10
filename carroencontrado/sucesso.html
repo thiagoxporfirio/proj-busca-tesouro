@@ -9,14 +9,13 @@
     <title>Game over, voce achou</title>
 </head>
 <body>
-
     <div id="successhandle" class="content-box">
         <div class="container-box">
             <div class="card-group">
                 <img src="../assets/sucesso.png" alt="sucessoimg">
                 <h2 class="h2-group">Email enviado!</h2>
             </div>
-            <span class="span-group">Aguarde entraremos em contato caso as informacoes forem validadas.</span>
+            <span class="span-group">Aguarde entraremos em contato.</span>
             <button class="btn-group">Voltar ao iniciar</button>
         </div>
     </div>
@@ -26,55 +25,52 @@
             <div class="position-img">
                 <img class="img-box" src="../assets/logoazul.png" alt="logo">
             </div>
-            <h2>Voce achou um veiculo procurado, parabéns.</h2>
-            <p> Agora precisamos que preencha alguns dados corretos e importantes do veiculo achado para que possamos validar e entrar em contato.<br><br>
-            Todos esses dados serao enviados ao nosso email, assim que validados entraremos em contato. Caso tudo esteja correto em seguida recebera sua recompensa por ter nos ajudado a achar o carro de um de nossos clientes.</p>
-            
+            <h2><span id="namelocalstorage"> </span>voce achou um veiculo procurado, parabéns.</h2>
+            <div class="datacar-container">
+                <div class="datacar">
+                    <p>Dados do carro encontrado:</p>
+                    <span class="spandatacar" id="marcaemodelo"> </span>
+                    <span class="spandatacar" id="placa"> </span>
+                    <span class="spandatacar" id="ano"> </span>
+                    <span class="spandatacar" id="cor"> </span>
+                </div>
+            </div> 
+
                 <div id="msgError" style="display: none;">Preencha todos os campos corretamente antes de cadastrar!!</div>
                 <div class="boxborder">
                     <form>
+
                         <div class="input-group">
-                            <label for="nome" id="LabelNomeCompleto"> Nome Completo</label>
-                            <input type="text" id="NomeCompleto" placeholder="Digite o seu nome completo" required>
+                            <label id="LabelEmail" for="Placa">Confirme seu Email</label>
+                            <div class="checkbox-group">
+                                <span id="emaillocalstorage" class="email-show"> </span>
+                                <input type="checkbox" id="email" placeholder="" required>
+                            </div>
+                        </div>
+
+
+                        <div class="input-group">
+                            <label for="fotos">Minimo 4 fotos do carro (Frente e Trás)</label>
+                            <input type="file" id="filename" name="arquivos" class="putImg" accept="image/png, image/jpeg" multiple />
                         </div>
 
                         <div class="input-group">
-                            <label id="LabelPlaca" for="Placa"> Placa</label>
-                            <input type="text" id="Placa" placeholder="Placa do veiculo encontrado" maxlength="7" required>
+                            <label for="fotos" id="LabelFotos">Fotos:</label>
+                            <div class="imgphoto"></div>
                         </div>
-
+                        
                         <div class="input-group">
-                            <label id="LabelEmail" for="Placa"> Email</label>
-                            <input type="text" id="email" placeholder="Seu email do site" maxlength="" required>
-                        </div>
-
-                        <div class="input-group">
-                            <label for="MarcaeModelo" id="LabelMarcaeModelo">Marca e Modelo</label>
-                            <input type="text" id="MarcaeModelo" placeholder="EX: AUDI/A3 AMBITION" required>
-                        </div>
-
-                        <div class="input-group">
-                            <label for="estado" id="LabelEstado">Estado</label>
-                            <input type="text" id="Estado" placeholder="Ex: SP" name="" maxlength="2" required>
-                        </div>
-
-                        <div class="input-group">
-                            <label for="Municipio" id="LabelMunicipio">Município</label>
-                            <input type="text" id="Municipio" placeholder="Ex: Osasco" name="" required>
-                        </div>
-
-                        <div class="input-group">
-                            <label for="fotos" id="LabelFotos">Minimo 03 fotos do carro (Frente e Traz)</label>
-                            <input type="file" id="filename" name="arquivos" class="putImg" accept="image/png, image/jpeg" onchange="converterImagem()" multiple />
-                        </div>
-
-                        <div class="input-group">
-                            <label for="Descricao" id="LabelDescricao">Descricao</label>
+                            <div id="cardinfos-container">
+                                <div class="cardinfos">
+                                    <span>Neste campo você deve descrever o estado de conservação do veiculo, e a localização completa onde o mesmo se encontra.</span>
+                                </div>
+                            </div>
+                            <label for="Descricao" id="LabelDescricao">Descricao</label><label for="informacao" id="infos">  ?</label>
                             <textarea id="TextDescricao" name="story" rows="5" cols="33"></textarea>
                         </div>
 
                         <div class="input-group">
-                            <button class="submitButton" type="submit">Enviar Email</button>
+                            <button class="submitButton" type="submit">Enviar</button>
                         </div>
                     </form>
                 </div>
@@ -94,5 +90,6 @@
 
 
     <script src="./app.js"></script>
+    <script src="./infos.js"></script>
 </body>
 </html>

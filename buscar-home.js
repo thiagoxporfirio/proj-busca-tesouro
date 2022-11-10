@@ -86,6 +86,7 @@ const init = () => {
                         if(typeof usuarioid === "undefined"){
                             return successFound()
                         }else{
+                            
                             successHandler()
                         }
                     }    
@@ -94,7 +95,24 @@ const init = () => {
                         errorHandler()
                     })
             
-            
+                    fetch('https://dry-chamber-14632.herokuapp.com/car', {
+                        method: 'POST',
+                        headres: {'Contente-type': 'application/json'},
+                        body: JSON.stringify({placa: inputPlaca.value,})
+                    }).then( async (res) => {
+                        let response = await res.text()
+                        console.log(response)
+
+                        let dadosdoCar = JSON.parse(localStorage.getItem('_DadosCar') || '{}')
+                        dadosdoCar = {... dadosdoCar, dados: JSON.parse(response)}
+
+                        localStorage.setItem('_DadosCar', JSON.stringify(dadosdoCar))
+                    
+
+                    }).catch((error) => {
+                        console.log(error.message)
+                        errorHandler()
+                    })
             
             }, 1500);
         })
@@ -103,7 +121,7 @@ const init = () => {
     let btn_gameover = document.querySelector('#btn-sucesso')
     if(btn_gameover){
         btn_gameover.addEventListener('click', () => {
-            window.location.href = '/carroencontrado/sucesso.html'
+            window.location.href = '/projBuscaTesouro/carroencontrado/sucesso.html'
         })
     }
 
