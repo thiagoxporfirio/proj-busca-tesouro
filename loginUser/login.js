@@ -100,6 +100,10 @@
                             return errorValidateEmail()
                     
                         }
+                        if(response = "Validate User: user not exists"){
+                            errorEmailExists()
+                            return errorHandler()
+                        }
                         
                         errorHandler()
                     }else{

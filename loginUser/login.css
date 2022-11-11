@@ -15,6 +15,18 @@
     font-family: 'Noto Sans', sans-serif;
 }
 
+.input-box-email{
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 10px;
+    text-align: center;
+    background-color: rgba(255, 0, 0, 0.651);
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+}
+
 .errorvalidate{
     width: 100%;
     padding: 10px;
