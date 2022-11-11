@@ -57,6 +57,11 @@
             submitButton.classList.add('error');
             submitButton.textContent = "Error :(";
         }
+       
+        let emailExists = document.querySelector('.input-box-email')
+        const errorEmailExists = () => {
+            emailExists.setAttribute('style', 'display:flex')
+        }
 
         if(submitButton) {
             submitButton.addEventListener('click', (event) => {
