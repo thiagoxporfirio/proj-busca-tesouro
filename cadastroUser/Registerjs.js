@@ -78,6 +78,13 @@ const init = () => {
     submitButton.textContent = "Error :(";
   }
 
+
+  // Emial ja existe no sistema
+  let emailExists = document.querySelector('.emailExists')
+  const errorEmailExists = () => {
+    emailExists.setAttribute('style', 'display:flex')
+  }
+
   inputNomeCompleto.addEventListener('input', validateNomeCompleto);
   inputUsername.addEventListener('input', validateUsername);
   inputEmail.addEventListener('input', validateEmail);
@@ -95,7 +102,7 @@ const init = () => {
       setTimeout(() => {
 
       
-        fetch ('https://dry-chamber-14632.herokuapp.com/cadastro', {
+        fetch ('http://localhost:1323/cadastro', {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({
@@ -108,7 +115,11 @@ const init = () => {
         })
         .then(response => {
           if (response.status !== 200){
-            return errorHandler()
+            errorHandler() 
+            if(response = "User Exists: email already exists in Sql"){
+                return errorEmailExists()
+             }
+    
         }else{
             console.log(response)
             successHandler()

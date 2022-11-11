@@ -74,6 +74,16 @@ body{
     font-family: 'Noto Sans', sans-serif;
 }
 
+.emailExists{
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    background-color:rgba(255, 0, 0, 0.637) ;
+    padding: 15px;
+    border-radius: 5px;
+    display: none;
+}
+
 .w50{
     width: 50%;
     float: left;
