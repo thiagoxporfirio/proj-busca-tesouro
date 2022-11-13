@@ -268,6 +268,7 @@ section .box-planos{
     font-family: 'Kdam Thmor Pro', sans-serif;
     width: 100%;
     height: auto;
+    box-shadow: 2px 1px 1px rgba(0, 0, 0, 0.329);
     padding: 67px 19px 56px;
     background-color: #f1f1f1;
     display: flex;
