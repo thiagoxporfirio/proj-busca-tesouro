@@ -1,5 +1,3 @@
-
-
     const btnlogin = document.querySelector('.btn')
     const btncadastro = document.querySelector('.btn2')
     const header1 = document.querySelector('#header1')
