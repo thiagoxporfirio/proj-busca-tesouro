@@ -268,15 +268,14 @@ section .box-planos{
     font-family: 'Kdam Thmor Pro', sans-serif;
     width: 100%;
     height: auto;
-    box-shadow: 2px 1px 1px rgba(0, 0, 0, 0.329);
+    box-shadow: 1px 5px 10px 1px rgba(0, 0, 0, 0.329);
     padding: 67px 19px 56px;
-    background-color: #f1f1f1;
+    background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 12px;
     margin-right: 20px;
-
 }
 
 

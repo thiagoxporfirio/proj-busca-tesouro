@@ -159,14 +159,14 @@ html{
 h1{
     text-align: center;
     color: #0033a0;
-    font-family: 'Kdam Thmor Pro', sans-serif;
-    font-size: 3.125rem;
+    font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-size: 2.3rem;
 }
 
 h3{
     text-align: center;
     font-family: 'Noto Sans', sans-serif;
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     color: #2a2a2a;
 }
 
@@ -519,13 +519,13 @@ span{
     margin-top: 50px;
     text-align: center;
     color: #ffb400;
-    font-family: 'Kdam Thmor Pro', sans-serif;
-    font-size: 3.75rem;
+    font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-size: 2.3rem;
 }
 
 .h3pacote{
     font-family: 'Noto Sans', sans-serif;
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     color: white;
     padding-bottom: 20px;
 }
@@ -648,14 +648,14 @@ li {
 
 .h1footer{
     color: #ffb400;
-    font-family: 'Kdam Thmor Pro', sans-serif;
-    font-size: 3.125rem;
+    font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-size: 2.3rem;
     text-shadow: 5px 5px 20px rgb(107, 106, 106);
 }
 
 .h3footer{
     font-family: 'Noto Sans', sans-serif;
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     color: white;
 
 }
@@ -735,6 +735,11 @@ span{
         margin-left: 20px;
     }
 
+}
+@media (max-width: 655px){
+    .containerPacote{
+        width: 100%;
+    }
 }
 
 
