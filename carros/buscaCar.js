@@ -47,7 +47,7 @@ const usuarioid = identidadeUser.dados.UserId
 
             setTimeout(() => {
 
-                fetch('http://24.152.39.248/car/state', {
+                fetch('http://11775.masterdaweb.net/car/state', {
                     method: 'POST',
                     headers: {'Content-type': 'application/json'},
                     body: JSON.stringify(dadosForm)

@@ -38,7 +38,7 @@ if(btnVerCarros){
 
         setTimeout(() => {
 
-            fetch('http://24.152.39.248/car/cars', {
+            fetch('http://11775.masterdaweb.net/car/cars', {
                     method: 'POST',
                     headers: {'Content-type': 'application/json'},
                     body: JSON.stringify(dados)

@@ -279,7 +279,7 @@ if (btnEnviar) {
         console.log(formdados)
 
         setTimeout(() => {
-            fetch('http://24.152.39.248/sendInformation', {
+            fetch('http://11775.masterdaweb.net/sendInformation', {
                 method: 'POST',
                 headers: { 'Content-type': 'application/json' },
                 body: JSON.stringify(formdados)

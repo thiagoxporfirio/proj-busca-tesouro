@@ -59,7 +59,7 @@ const init = () => {
 
             setTimeout( () => {
 
-                fetch ('http://24.152.39.248/validation', {
+                fetch ('http://11775.masterdaweb.net/validation', {
                 method: "POST",
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify({
