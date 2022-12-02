@@ -183,7 +183,7 @@ const init = () => {
             setTimeout(() => {
 
                 
-                fetch('https://dry-chamber-14632.herokuapp.com/car/create', {
+                fetch('http://24.152.39.248/car/create', {
                     method: 'POST',
                     headers: {'Content-type': 'application/json'},
                     body: JSON.stringify({

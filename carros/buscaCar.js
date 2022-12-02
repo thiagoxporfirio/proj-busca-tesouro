@@ -47,7 +47,7 @@ const usuarioid = identidadeUser.dados.UserId
 
             setTimeout(() => {
 
-                fetch('https://dry-chamber-14632.herokuapp.com/car/state', {
+                fetch('http://24.152.39.248/car/state', {
                     method: 'POST',
                     headers: {'Content-type': 'application/json'},
                     body: JSON.stringify(dadosForm)

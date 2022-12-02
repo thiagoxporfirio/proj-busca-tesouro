@@ -68,7 +68,7 @@ const init = () => {
 
             setTimeout(() => {
                 
-                fetch('https://dry-chamber-14632.herokuapp.com/car/placa', {
+                fetch('http://24.152.39.248/car/placa', {
                     method: 'POST',
                     headers: {'Content-type': 'application/json'},
                     body: JSON.stringify({
@@ -95,7 +95,7 @@ const init = () => {
                         errorHandler()
                     })
             
-                    fetch('https://dry-chamber-14632.herokuapp.com/car', {
+                    fetch('http://24.152.39.248/car', {
                         method: 'POST',
                         headres: {'Contente-type': 'application/json'},
                         body: JSON.stringify({placa: inputPlaca.value,})

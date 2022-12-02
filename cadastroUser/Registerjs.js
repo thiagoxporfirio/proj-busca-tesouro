@@ -102,7 +102,7 @@ const init = () => {
       setTimeout(() => {
 
       
-        fetch ('https://dry-chamber-14632.herokuapp.com/cadastro', {
+        fetch ('http://24.152.39.248/cadastro', {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({

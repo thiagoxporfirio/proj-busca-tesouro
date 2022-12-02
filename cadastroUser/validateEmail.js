@@ -59,7 +59,7 @@ const init = () => {
 
             setTimeout( () => {
 
-                fetch ('https://dry-chamber-14632.herokuapp.com/validation', {
+                fetch ('http://24.152.39.248/validation', {
                 method: "POST",
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify({

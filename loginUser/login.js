@@ -72,7 +72,7 @@
 
                 
 
-                fetch('https://dry-chamber-14632.herokuapp.com/login', {
+                fetch('http://24.152.39.248/login', {
                     method: 'POST',
                     headers: {'Content-type': 'application/json'},
                     body: JSON.stringify({
