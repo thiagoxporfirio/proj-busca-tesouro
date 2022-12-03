@@ -72,7 +72,7 @@
 
                 
 
-                fetch('http://11775.masterdaweb.net/login', {
+                fetch('http://www.api.buscatesouro.com.br/login/login', {
                     method: 'POST',
                     headers: {'Content-type': 'application/json'},
                     body: JSON.stringify({

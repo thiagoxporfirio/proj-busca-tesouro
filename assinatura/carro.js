@@ -183,7 +183,7 @@ const init = () => {
             setTimeout(() => {
 
                 
-                fetch('http://11775.masterdaweb.net/car/create', {
+                fetch('http://www.api.buscatesouro.com.br/login/car/create', {
                     method: 'POST',
                     headers: {'Content-type': 'application/json'},
                     body: JSON.stringify({

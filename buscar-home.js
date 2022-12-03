@@ -68,7 +68,7 @@ const init = () => {
 
             setTimeout(() => {
                 
-                fetch('http://11775.masterdaweb.net/car/placa', {
+                fetch('http://www.api.buscatesouro.com.br/login/car/placa', {
                     method: 'POST',
                     headers: {'Content-type': 'application/json'},
                     body: JSON.stringify({
@@ -95,7 +95,7 @@ const init = () => {
                         errorHandler()
                     })
             
-                    fetch('http://11775.masterdaweb.net/car', {
+                    fetch('http://www.api.buscatesouro.com.br/login/car', {
                         method: 'POST',
                         headres: {'Contente-type': 'application/json'},
                         body: JSON.stringify({placa: inputPlaca.value,})

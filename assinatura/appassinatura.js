@@ -15,7 +15,7 @@ if(btnUserid){
             spanfazlogin.style.display = "flex"
             return
         }
-        window.location.href = `https://calm-caverns-77349.herokuapp.com/?userID=${usuarioid}`
+        window.location.href = `../mercadoapi/index.html`
     })
 }
 
@@ -26,7 +26,7 @@ if(btnUserid2){
             spanfazlogin.style.display = "flex"
             return
         }
-        window.location.href = `https://calm-caverns-77349.herokuapp.com/cliente2/?userID=${usuarioid}`
+        window.location.href = `../mercadoapi/plano2.html/?userID=${usuarioid}`
         console.log("clicou")
     })
 }
@@ -38,6 +38,6 @@ if(btnUserid3){
             spanfazlogin.style.display = "flex"
             return
         }
-        window.location.href = `https://calm-caverns-77349.herokuapp.com/cliente3/?userID=${usuarioid}`
+        window.location.href = `../mercadoapi/plano3.html/?userID=${usuarioid}`
     })
 }
