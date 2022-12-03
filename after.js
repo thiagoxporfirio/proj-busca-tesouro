@@ -141,7 +141,7 @@ if(btnmeuSaldo){
         let identidadeUser = JSON.parse(localStorage.getItem('_DadosUser2') || '{}')
         let usuarioid = identidadeUser.dados.UserId
 
-        fetch('http://www.api.buscatesouro.com.br/car/carsCanCreate', {
+        fetch('http://api.buscatesouro.com.br/car/carsCanCreate', {
             method: 'POST',
             headers: {'Content-type': 'application/json'},
             body: JSON.stringify({

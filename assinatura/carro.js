@@ -183,7 +183,7 @@ const init = () => {
             setTimeout(() => {
 
                 
-                fetch('http://www.api.buscatesouro.com.br/car/create', {
+                fetch('http://api.buscatesouro.com.br/car/create', {
                     method: 'POST',
                     headers: {'Content-type': 'application/json'},
                     body: JSON.stringify({
