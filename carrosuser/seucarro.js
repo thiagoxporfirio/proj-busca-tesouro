@@ -38,7 +38,7 @@ if(btnVerCarros){
 
         setTimeout(() => {
 
-            fetch('http://www.api.buscatesouro.com.br/login/car/cars', {
+            fetch('http://www.api.buscatesouro.com.br/car/cars', {
                     method: 'POST',
                     headers: {'Content-type': 'application/json'},
                     body: JSON.stringify(dados)
