@@ -59,7 +59,7 @@ const init = () => {
 
             setTimeout( () => {
 
-                fetch ('https://api.buscatesouro.com.br/validation', {
+                fetch ('http://api.buscatesouro.com.br/validation', {
                 method: "POST",
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify({
