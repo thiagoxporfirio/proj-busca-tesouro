@@ -10,6 +10,7 @@ const usuarioid = identidadeUser.dados.UserId
 let urlParams = new URLSearchParams(window.location.search)
 let useridParams = urlParams.get("userID")
 console.log(useridParams)
+console.log(usuarioid)
 
 
 // Handle call to backend and generate preference.
@@ -25,7 +26,7 @@ document.getElementById("checkout-btn").addEventListener("click", function() {
     plano: document.getElementById("unit-price2").innerHTML
   };
  
-  fetch("https://api.buscatesouro.com.br/checkout/create_preference", {
+  fetch("https://api.buscatesouro.com.br/create_preference", {
     method: "POST",
     headers: {
         "Content-Type": "application/json",
