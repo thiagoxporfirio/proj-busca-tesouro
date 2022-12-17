@@ -72,7 +72,7 @@
 
                 
 
-                fetch('http://127.0.0.1:3000/login', {
+                fetch('http://api.buscatesouro.com.br/login', {
                     method: 'POST',
                     headers: {'Content-type': 'application/json'},
                     body: JSON.stringify({

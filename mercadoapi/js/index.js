@@ -26,7 +26,7 @@ document.getElementById("checkout-btn").addEventListener("click", function() {
     plano: document.getElementById("unit-price2").innerHTML
   };
  
-  fetch("http://127.0.0.1:3000:8080/create_preference", {
+  fetch("http://api.buscatesouro.com.br/create_preference", {
     method: "POST",
     headers: {
         "Content-Type": "application/json",
