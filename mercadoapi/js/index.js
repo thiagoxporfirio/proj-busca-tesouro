@@ -26,7 +26,7 @@ document.getElementById("checkout-btn").addEventListener("click", function() {
     plano: document.getElementById("unit-price2").innerHTML
   };
  
-  fetch("http://localhost:8080/create_preference", {
+  fetch("http://127.0.0.1:8080/create_preference", {
     method: "POST",
     headers: {
         "Content-Type": "application/json",
