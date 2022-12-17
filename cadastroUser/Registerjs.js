@@ -102,7 +102,7 @@ const init = () => {
       setTimeout(() => {
 
       
-        fetch ('https://api.buscatesouro.com.br/cadastro', {
+        fetch ('http://localhost:3000/cadastro', {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({

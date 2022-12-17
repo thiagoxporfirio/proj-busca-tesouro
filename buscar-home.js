@@ -68,7 +68,7 @@ const init = () => {
 
             setTimeout(() => {
                 
-                fetch('https://api.buscatesouro.com.br/car/placa', {
+                fetch('http://localhost:3000/car/placa', {
                     method: 'POST',
                     headers: {'Content-type': 'application/json'},
                     body: JSON.stringify({
@@ -87,7 +87,7 @@ const init = () => {
                             return successFound()
                         }else{
                             
-                            successHandler()
+                        successHandler()
                         }
                     }    
                     }).catch((error) => {
@@ -95,26 +95,26 @@ const init = () => {
                         errorHandler()
                     })
             
-                    fetch('https://api.buscatesouro.com.br/car', {
-                        method: 'POST',
-                        headres: {'Contente-type': 'application/json'},
-                        body: JSON.stringify({placa: inputPlaca.value,})
-                    }).then( async (res) => {
-                        let response = await res.text()
-                        console.log(response)
+                    // fetch('http://localhost:3000/car', {
+                    //     method: 'POST',
+                    //     headres: {'Contente-type': 'application/json'},
+                    //     body: JSON.stringify({placa: inputPlaca.value,})
+                    // }).then( async (res) => {
+                    //     let response = await res.text()
+                    //     console.log(response)
 
-                        let dadosdoCar = JSON.parse(localStorage.getItem('_DadosCar') || '{}')
-                        dadosdoCar = {... dadosdoCar, dados: JSON.parse(response)}
+                    //     let dadosdoCar = JSON.parse(localStorage.getItem('_DadosCar') || '{}')
+                    //     dadosdoCar = {... dadosdoCar, dados: JSON.parse(response)}
 
-                        localStorage.setItem('_DadosCar', JSON.stringify(dadosdoCar))
+                    //     localStorage.setItem('_DadosCar', JSON.stringify(dadosdoCar))
                     
 
-                    }).catch((error) => {
-                        console.log(error.message)
-                        errorHandler()
-                    })
+                    // }).catch((error) => {
+                    //     console.log(error.message)
+                    //     errorHandler()
+                    // })
             
-            }, 1500);
+            }, 1000);
         })
     }
 

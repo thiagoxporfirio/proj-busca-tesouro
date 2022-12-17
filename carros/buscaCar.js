@@ -47,7 +47,7 @@ const usuarioid = identidadeUser.dados.UserId
 
             setTimeout(() => {
 
-                fetch('https://api.buscatesouro.com.br/car/state', {
+                fetch('http://localhost:3000/car/state', {
                     method: 'POST',
                     headers: {'Content-type': 'application/json'},
                     body: JSON.stringify(dadosForm)
