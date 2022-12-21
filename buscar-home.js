@@ -68,7 +68,7 @@ const init = () => {
 
             setTimeout(() => {
                 
-                fetch('http://api.buscatesouro.com.br/car/placa', {
+                fetch('https://api.buscatesouro.com.br/car/placa', {
                     method: 'POST',
                     headers: {'Content-type': 'application/json'},
                     body: JSON.stringify({
@@ -95,7 +95,7 @@ const init = () => {
                         errorHandler()
                     })
             
-                    // fetch('http://api.buscatesouro.com.br/car', {
+                    // fetch('https://api.buscatesouro.com.br/car', {
                     //     method: 'POST',
                     //     headres: {'Contente-type': 'application/json'},
                     //     body: JSON.stringify({placa: inputPlaca.value,})

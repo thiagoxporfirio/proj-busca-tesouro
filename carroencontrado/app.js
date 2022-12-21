@@ -279,7 +279,7 @@ if (btnEnviar) {
         console.log(formdados)
 
         setTimeout(() => {
-            fetch('http://api.buscatesouro.com.br/sendInformation', {
+            fetch('https://api.buscatesouro.com.br/sendInformation', {
                 method: 'POST',
                 headers: { 'Content-type': 'application/json' },
                 body: JSON.stringify(formdados)
