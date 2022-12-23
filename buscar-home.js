@@ -10,19 +10,19 @@ const init = () => {
     const divGameoverLogin = document.querySelector('#gameoverLogin')
     const btnFazLogin = document.querySelector('#btn-faz-login')
 
-    if (btnFazLogin) {
+    if(btnFazLogin){
         btnFazLogin.addEventListener('click', () => {
             window.location.href = '/loginUser/login.html'
         })
     }
 
-    if (btnFecharLogin) {
+    if(btnFecharLogin){
         btnFecharLogin.addEventListener('click', () => {
             divGameoverLogin.setAttribute('style', 'display:none')
         })
     }
 
-    if (btnFechar) {
+    if(btnFechar){
         btnFechar.addEventListener('click', () => {
             divGameOver.setAttribute('style', 'display:none')
         })
@@ -59,55 +59,75 @@ const init = () => {
     }
 
 
-    if (btnSubmit_Buscar) {
+    if(btnSubmit_Buscar){
         btnSubmit_Buscar.addEventListener('click', (e) => {
             e.preventDefault()
-            console.log("clicou")
 
             btnSubmit_Buscar.textContent = "Buscando..."
 
             setTimeout(() => {
-
+                
                 fetch('https://api.buscatesouro.com.br/car/placa', {
                     method: 'POST',
-                    headers: { 'Content-type': 'application/json', 'Access-Control-Allow-Origin':'*'},
+                    headers: {'Content-type': 'application/json', 'Access-Control-Allow-Methods':'GET,PUT,POST',
+                    'Access-Control-Allow-Headers': 'Content-Type',
+                    'Access-Control-Allow-Origin':'*'},
                     body: JSON.stringify({
                         placa: inputPlaca.value,
                     })
                 }).then((response) => {
-                    if (response.status !== 200) {
+                    if(response.status !== 200){
                         return errorHandler()
 
                     }
-                    if (response.status == 200) {
+                    if(response.status == 200){
                         let identidadeUser = JSON.parse(localStorage.getItem('_DadosUser2') || '{}')
                         let usuarioid = identidadeUser?.dados?.UserId
 
-                        if (typeof usuarioid === "undefined") {
+                        if(typeof usuarioid === "undefined"){
                             return successFound()
-                        } else {
-
+                        }else{
                             successHandler()
                         }
-                    }
-                }).catch((error) => {
-                    console.log(error.message)
-                    errorHandler()
-                })
+                    }    
+                    }).catch((error) => {
+                        console.log(error.message)
+                        errorHandler()
+                    })
 
-            }, 1000);
+                    fetch('https://api.buscatesouro.com.br/car', {
+                        method: 'POST',
+                        headres: {'Contente-type': 'application/json'},
+                        body: JSON.stringify({placa: inputPlaca.value,})
+                    }).then( async (res) => {
+                        let response = await res.text()
+                        console.log(response)
+
+                        let dadosdoCar = JSON.parse(localStorage.getItem('_DadosCar') || '{}')
+                        dadosdoCar = {... dadosdoCar, dados: JSON.parse(response)}
+
+                        localStorage.setItem('_DadosCar', JSON.stringify(dadosdoCar))
+                    
+
+                    }).catch((error) => {
+                        console.log(error.message)
+                        // errorHandler()
+                    })
+                
+            
+            }, 1500);
         })
     }
 
     let btn_gameover = document.querySelector('#btn-sucesso')
-    if (btn_gameover) {
+    if(btn_gameover){
         btn_gameover.addEventListener('click', () => {
             window.location.href = '/carroencontrado/sucesso.html'
         })
     }
 
     let btn_fechaCardCarros = document.querySelector('.fechaCardCarros')
-    if (btn_fechaCardCarros) {
+    if(btn_fechaCardCarros){
         btn_fechaCardCarros.addEventListener('click', () => {
             let cardMeuSaldo = document.querySelector('#cardMeuSaldo')
 

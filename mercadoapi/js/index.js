@@ -1,7 +1,7 @@
 // Add SDK credentials
-// REPLACE WITH YOUR PUBLIC KEY AVAILABLE IN: http://developers.mercadopago.com/panel
+// REPLACE WITH YOUR PUBLIC KEY AVAILABLE IN: https://developers.mercadopago.com/panel
 const mercadopago = new MercadoPago('TEST-1b1918af-3122-473f-842c-e92174d72d13', {
-  locale: 'pt-BR'
+  locale: 'pt-BR' // The most common are: 'pt-BR', 'es-AR' and 'en-US'
 });
 
 let identidadeUser = JSON.parse(localStorage.getItem('_DadosUser2') || '{}')
