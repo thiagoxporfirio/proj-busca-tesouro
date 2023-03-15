@@ -62,7 +62,6 @@ const init = () => {
     if(btnSubmit_Buscar){
         btnSubmit_Buscar.addEventListener('click', (e) => {
             e.preventDefault()
-            console.log("clicou")
 
             btnSubmit_Buscar.textContent = "Buscando..."
 
@@ -70,7 +69,9 @@ const init = () => {
                 
                 fetch('http://localhost:1323/car/placa', {
                     method: 'POST',
-                    headers: {'Content-type': 'application/json'},
+                    headers: {'Content-type': 'application/json', 'Access-Control-Allow-Methods':'GET,PUT,POST',
+                    'Access-Control-Allow-Headers': 'Content-Type',
+                    'Access-Control-Allow-Origin':'*'},
                     body: JSON.stringify({
                         placa: inputPlaca.value,
                     })
@@ -86,7 +87,6 @@ const init = () => {
                         if(typeof usuarioid === "undefined"){
                             return successFound()
                         }else{
-                            
                             successHandler()
                         }
                     }    
@@ -94,8 +94,13 @@ const init = () => {
                         console.log(error.message)
                         errorHandler()
                     })
+<<<<<<< HEAD
             
                     fetch('http://localhost:1323/car', {
+=======
+
+                    fetch('https://api.buscatesouro.com.br/car', {
+>>>>>>> 8dfd67b89b979574f4785a44f713bdb645d8f3a5
                         method: 'POST',
                         headres: {'Contente-type': 'application/json'},
                         body: JSON.stringify({placa: inputPlaca.value,})
@@ -112,6 +117,7 @@ const init = () => {
                         console.log(error.message)
                         // errorHandler()
                     })
+                
             
             }, 1500);
         })
