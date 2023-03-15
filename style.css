@@ -361,37 +361,12 @@ section .containerh1{
     width: 90%;
 }
 
-
-.containerPacote{
-    
-    font-family: 'Kdam Thmor Pro', sans-serif;
-    width: 60%;
-    padding: 67px 19px 56px;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 12px;
-}
-
-.planoVeicular{
-    font-size: 1.8rem;
-    margin-top: 0;
-    margin-bottom: 5px;
-}
-
 b{
     text-align: center;
     color: #11e068;
     font-weight: 800;
     font-size: 2.25rem;
     margin-bottom: 6px;
-}
-
-.preco{
-    display: flex;
-    flex-direction: column;
 }
 
 s{
@@ -517,24 +492,92 @@ span{
     align-items: center;
     justify-content: center;
     max-width: 980px;
-    width: 90%;
-    
+    width: 100%;
 }
 
+.pacotecontent{
+    width: 100%;
+    max-width: 1216px;
+    margin: 40px auto;
+    display: flex;
+    gap: 32px;
+
+}
+
+.pacotesplain{
+    width: 370px;
+    height: 471px;
+    border-radius: 8px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+
+}
+
+.tituloplain{
+    font-family: 'Sora';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 30px;
+    margin-top: 56px;
+    color: #293145;
+
+}
+
+.precoplain{
+    margin-top: 50px;
+    font-weight: 700;
+    font-size: 30px;
+    color: #293145;
+}
+
+.sobreplain{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    /* or 139% */
+    text-align: center;
+    width: 100%;
+    height: 75px;
+    margin-top: 80px;
+    color: #6E7275;
+    padding: 5px;
+}
+
+.btnplain{
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 80px;
+    gap: 10px;
+    background: #0F9AFE;
+    border: none;
+    box-shadow: 1px 3px 4px rgba(19, 125, 224, 0.5);
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 20px;
+    font-family: 'Nunito';
+}
 
 .h1pacote{
     margin-top: 50px;
     text-align: center;
     color: #ffb400;
-    font-family: 'Kdam Thmor Pro', sans-serif;
-    font-size: 3.75rem;
+    font-family: 'Sora';
+    font-size: 2rem;
 }
 
 .h3pacote{
-    font-family: 'Noto Sans', sans-serif;
-    font-size: 1.25rem;
+    font-family: 'Inter';
+    font-size: 1rem;
     color: white;
     padding-bottom: 20px;
+    margin-top: 5px;
 }
 
 .h3pacoteclass{
@@ -549,7 +592,14 @@ span{
 
 p{
     color: black;
-    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-family: 'Inter';
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.info{
+    color: white;
+    font-family: 'Inter';
     text-align: center;
     margin-bottom: 10px;
 }
