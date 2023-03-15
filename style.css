@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Rozha+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Sora:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Nunito:wght@300&family=Sora:wght@300&display=swap');
 
 :root {
     --input-error: red;
@@ -158,16 +161,16 @@ html{
 
 h1{
     text-align: center;
-    color: #0033a0;
-    font-family: 'Kdam Thmor Pro', sans-serif;
-    font-size: 3.125rem;
+    color: #293145;
+    font-family: 'Sora';
+    font-size: 2rem;
 }
 
 h3{
     text-align: center;
-    font-family: 'Noto Sans', sans-serif;
-    font-size: 1.25rem;
-    color: #2a2a2a;
+    font-family: 'Inter';
+    font-size: 1rem;
+    color: #6E7275;
 }
 
 
@@ -433,9 +436,13 @@ span{
 
 .input1{
     text-transform: uppercase;
-    font-family: 'Kdam Thmor Pro', sans-serif;
-    padding: 20px;
-    font-size: 0.938rem;
+    font-family: 'Nunito';
+    background-color: #e9e6e6;
+    padding: 15px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 1px 0px 20px #e9e6e6;
 }
 
 .input-consulta{
@@ -445,9 +452,9 @@ span{
 }
 
 .btn-1{
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Nunito';
     margin-left: 15px;
-    width: 180px;
+    width: 150px;
     height: 55px;
     background: #ffb400;
     border-radius: 5px;
