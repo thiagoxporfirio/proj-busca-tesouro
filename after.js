@@ -1,3 +1,5 @@
+
+
     const btnlogin = document.querySelector('.btn')
     const btncadastro = document.querySelector('.btn2')
     const header1 = document.querySelector('#header1')
@@ -141,7 +143,7 @@ if(btnmeuSaldo){
         let identidadeUser = JSON.parse(localStorage.getItem('_DadosUser2') || '{}')
         let usuarioid = identidadeUser.dados.UserId
 
-        fetch('https://api.buscatesouro.com.br/car/carsCanCreate', {
+        fetch('http://localhost:1323/car/carsCanCreate', {
             method: 'POST',
             headers: {'Content-type': 'application/json'},
             body: JSON.stringify({

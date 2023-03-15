@@ -15,6 +15,8 @@
     font-family: 'Noto Sans', sans-serif;
 }
 
+
+
 .input-box-email{
     width: 100%;
     justify-content: center;
@@ -26,6 +28,7 @@
     border-radius: 5px;
     display: none;
 }
+
 
 .errorvalidate{
     width: 100%;

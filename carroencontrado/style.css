@@ -277,7 +277,7 @@ form .checkbox-group input{
     gap: 2px;
 }
 
-/* @media (max-width:578px) {
+@media (max-width:578px) {
     .datacar-container{
         width: 100%;
     }
@@ -300,4 +300,4 @@ form .checkbox-group input{
     .cardinfos-container{
         margin-top: 165px;
     }
-}  */
+} 

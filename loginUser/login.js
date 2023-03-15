@@ -72,7 +72,7 @@
 
                 
 
-                fetch('https://api.buscatesouro.com.br/login', {
+                fetch('http://localhost:1323/login', {
                     method: 'POST',
                     headers: {'Content-type': 'application/json'},
                     body: JSON.stringify({
@@ -107,6 +107,7 @@
                         }
                         if(response = "Validate User: user not exists"){
                             errorEmailExists()
+                            
                             return errorHandler()
                         }
                         
@@ -114,6 +115,7 @@
                     }else{
                         let dadosdoUser = JSON.parse(localStorage.getItem('_DadosUser2') || '{}')
                         dadosdoUser = {... dadosdoUser, dados: JSON.parse(responseTextFromError)}
+                        
                         localStorage.setItem('_DadosUser2', JSON.stringify(dadosdoUser))
                         let usuarioid = dadosdoUser.dados
 

@@ -68,7 +68,7 @@ const init = () => {
 
             setTimeout(() => {
                 
-                fetch('https://api.buscatesouro.com.br/car/placa', {
+                fetch('http://localhost:1323/car/placa', {
                     method: 'POST',
                     headers: {'Content-type': 'application/json'},
                     body: JSON.stringify({
@@ -95,7 +95,7 @@ const init = () => {
                         errorHandler()
                     })
             
-                    fetch('https://api.buscatesouro.com.br/car', {
+                    fetch('http://localhost:1323/car', {
                         method: 'POST',
                         headres: {'Contente-type': 'application/json'},
                         body: JSON.stringify({placa: inputPlaca.value,})
@@ -108,10 +108,9 @@ const init = () => {
 
                         localStorage.setItem('_DadosCar', JSON.stringify(dadosdoCar))
                     
-
                     }).catch((error) => {
                         console.log(error.message)
-                        errorHandler()
+                        // errorHandler()
                     })
             
             }, 1500);
@@ -121,7 +120,7 @@ const init = () => {
     let btn_gameover = document.querySelector('#btn-sucesso')
     if(btn_gameover){
         btn_gameover.addEventListener('click', () => {
-            window.location.href = '/carroencontrado/sucesso.html'
+            window.location.href = '/projBuscaTesouro/carroencontrado/sucesso.html'
         })
     }
 
