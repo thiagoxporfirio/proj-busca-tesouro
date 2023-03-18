@@ -175,7 +175,7 @@ h3{
 
 
 a {
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Nunito';
     text-align: center;
     color: white;
     text-decoration: none;
@@ -547,6 +547,11 @@ span{
     color: #6E7275;
     padding: 5px;
 }
+.content_btn{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
 
 .btnplain{
     margin-top: 70px;
@@ -562,6 +567,14 @@ span{
     font-weight: 700;
     font-size: 20px;
     font-family: 'Nunito';
+    cursor: pointer;
+}
+
+.btnplain:hover {
+    transition: all 0.2s ease;
+   
+    background: #ffb400;
+    box-shadow: 1px 3px 4px rgba(170, 172, 173, 0.5);
 }
 
 .h1pacote{
@@ -714,14 +727,14 @@ li {
 
 .h1footer{
     color: #ffb400;
-    font-family: 'Kdam Thmor Pro', sans-serif;
-    font-size: 3.125rem;
+    font-family: 'Sora';
+    font-size: 2rem;
     text-shadow: 5px 5px 20px rgb(107, 106, 106);
 }
 
 .h3footer{
-    font-family: 'Noto Sans', sans-serif;
-    font-size: 1.25rem;
+    font-family: 'Inter';
+    font-size: 1rem;
     color: white;
 
 }
@@ -731,7 +744,9 @@ li {
     margin-bottom: 20px;
     padding: 20px;
     font-size: 0.938rem;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Nunito';
+    border-radius: 8px;
+    border: none;
 }
 
 .caixamensage{
@@ -754,7 +769,8 @@ li {
     justify-content: center;
     display: flex;
     flex-direction: column;
-    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-family: 'Inter';
+    font-weight: 600;
 }
 
 
@@ -764,8 +780,7 @@ li {
 }
 
 .h3dados{
-    font-family: 'Kdam Thmor Pro', sans-serif;
-    font-size: 1.25rem;
+    font-size: 1rem;
     color: white;
 }
 
@@ -778,7 +793,7 @@ span{
     align-items: center;
     justify-content: center;
     display: flex;
-    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-family: 'Inter';
 }
 
 
@@ -788,6 +803,16 @@ span{
     }
 
 }
+
+@media(max-width: 1010px) {
+    .pacotecontent{
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
 @media (max-width: 999px){
     .card{
        margin-left: -80%;
@@ -848,6 +873,14 @@ span{
         font-size: 2rem;
     }
 }
+
+@media (max-width: 450px){
+    .pacotesplain{
+        width: 80%;
+
+    }
+}
+
 
 @media (max-width: 441px){
     .inputdados{
