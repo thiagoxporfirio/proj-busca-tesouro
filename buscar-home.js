@@ -94,13 +94,8 @@ const init = () => {
                         console.log(error.message)
                         errorHandler()
                     })
-<<<<<<< HEAD
             
                     fetch('http://localhost:1323/car', {
-=======
-
-                    fetch('https://api.buscatesouro.com.br/car', {
->>>>>>> 8dfd67b89b979574f4785a44f713bdb645d8f3a5
                         method: 'POST',
                         headres: {'Contente-type': 'application/json'},
                         body: JSON.stringify({placa: inputPlaca.value,})
@@ -140,6 +135,28 @@ const init = () => {
     }
 
 
+    let btnPlanos = document.querySelector('.btnplain')
+    if(btnPlanos){
+        btnPlanos.addEventListener('click', () => {
+            window.location.href = '/assinatura/assinatura.html'
+        })
+    }
+
+
+    let btnPlanos2 = document.querySelector('.btnplain2')
+    if(btnPlanos2){
+        btnPlanos2.addEventListener('click', () => {
+            window.location.href = '/assinatura/assinatura.html'
+        })
+    }
+
+
+    let btnPlanos3 = document.querySelector('.btnplain3')
+    if(btnPlanos3){
+        btnPlanos3.addEventListener('click', () => {
+            window.location.href = '/assinatura/assinatura.html'
+        })
+    }
 
 
 
