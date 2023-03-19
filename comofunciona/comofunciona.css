@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Rozha+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Sora:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Nunito:wght@300&family=Sora:wght@300&display=swap');
 
 *{
     box-sizing: border-box;
@@ -40,32 +43,41 @@ body{
 
 
 p{
-  margin-top: 20px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
   text-align: center;
-  font-family: 'Noto Sans', sans-serif;
+  color: #6E7275;
+  margin-bottom: 20px;
 }
 
 h1{
   text-align: center;
   color: #0033a0;
-  font-family: 'Kdam Thmor Pro', sans-serif;
-  font-size: 3.125rem;
+  font-family: 'Sora';
+  font-size: 2rem;
+  margin-top: 20px;
 }
 
 h3{
-  text-align: center;
-  font-family: 'Noto Sans', sans-serif;
-  font-size: 1.25rem;
-  color: #2a2a2a;
-}
+  font-family: 'Sora';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  margin-top: 56px;
+  color: #293145;}
+
 
 
 a {
-  font-family: 'Noto Sans', sans-serif;
-  text-align: center;
-  color: white;
-  text-decoration: none;
-  transition: 0.3s;
+  font-family: 'Nunito';
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
 }
 
 a:hover {
